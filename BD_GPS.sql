@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     18/05/2021 18:30:29                          */
+/* Created on:     19/05/2021 20:56:18                          */
 /*==============================================================*/
 
 /*==============================================================*/
@@ -307,6 +307,8 @@ create table TRABAJADORES
    TIPOSANGRETRAB       varchar(10) not null  comment '',
    CUENTABANCTRAB       varchar(18) not null  comment '',
    NOSEGUROTRAB         varchar(11) not null  comment '',
+   USUARIO              varchar(50) not null  comment '',
+   CONTRASENA           varchar(50) not null  comment '',
    primary key (IDTRABAJADOR)
 );
 
