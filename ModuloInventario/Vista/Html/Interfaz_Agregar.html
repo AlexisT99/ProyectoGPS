@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Materiales</title>
+    <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <script type="text/javascript">
+        function MostrarAgregarEquipo() {
+            // Se quitan los input de la interfaz agregar Materiales  
+            document.getElementById('CodigoM').style.display = 'none';
+            document.getElementById('NombreM').style.display = 'none';
+            document.getElementById('unidadM').style.display = 'none';
+            document.getElementById('cantidadM').style.display = 'none';
+            document.getElementById('descripM').style.display = 'none';
+            document.getElementById('modeloM').style.display = 'none';
+            document.getElementById('marcaM').style.display = 'none';
+            document.getElementById('tipoM').style.display = 'none';
+            // Se quitan lo label de la interfaz de agregar Materiales 
+            document.getElementById('Codigo').style.display = 'none';
+            document.getElementById('Nombre').style.display = 'none';
+            document.getElementById('unidad').style.display = 'none';
+            document.getElementById('cantidad').style.display = 'none';
+            document.getElementById('descrip').style.display = 'none';
+            document.getElementById('Modelo').style.display = 'none';
+            document.getElementById('Marca').style.display = 'none';
+            document.getElementById('Tipo').style.display = 'none';
+            // Se muestran los input de la interfaz agregar Equipo 
+            document.getElementById('CodigoE').style.display = 'block';
+            document.getElementById('CantidadE').style.display = 'block';
+            document.getElementById('DescripcionE').style.display = 'block';
+            document.getElementById('CaracteristicasE').style.display = 'block';
+            document.getElementById('MarcaE').style.display = 'block';
+            document.getElementById('ModeloE').style.display = 'block';
+            document.getElementById('TipoE').style.display = 'block';
+            document.getElementById('CapacidadE').style.display = 'block';
+            document.getElementById('vidaE').style.display = 'block';
+            // Se muestran los label de la interfaz agregar Equipo 
+            document.getElementById('CodigoEq').style.display = 'block';
+            document.getElementById('CantidadEq').style.display = 'block';
+            document.getElementById('DescripcionEq').style.display = 'block';
+            document.getElementById('CaracteristicasEq').style.display = 'block';
+            document.getElementById('MarcaEq').style.display = 'block';
+            document.getElementById('ModeloEq').style.display = 'block';
+            document.getElementById('TipoEq').style.display = 'block';
+            document.getElementById('CapacidadEq').style.display = 'block';
+            document.getElementById('vidaEq').style.display = 'block';
+        }
+
+        function MostrarAgregarMateriales() {
+            // Se muestran los input de la interfaz agregar Materiales  
+            document.getElementById('CodigoM').style.display = 'block';
+            document.getElementById('NombreM').style.display = 'block';
+            document.getElementById('unidadM').style.display = 'block';
+            document.getElementById('cantidadM').style.display = 'block';
+            document.getElementById('descripM').style.display = 'block';
+            document.getElementById('modeloM').style.display = 'block';
+            document.getElementById('marcaM').style.display = 'block';
+            document.getElementById('tipoM').style.display = 'block';
+            // Se muestran lo label de la interfaz de agregar Materiales 
+            document.getElementById('Codigo').style.display = 'block';
+            document.getElementById('Nombre').style.display = 'block';
+            document.getElementById('unidad').style.display = 'block';
+            document.getElementById('cantidad').style.display = 'block';
+            document.getElementById('descrip').style.display = 'block';
+            document.getElementById('Modelo').style.display = 'block';
+            document.getElementById('Marca').style.display = 'block';
+            document.getElementById('Tipo').style.display = 'block';
+            // Se quitan los input de la interfaz agregar Equipo 
+            document.getElementById('CodigoE').style.display = 'none';
+            document.getElementById('CantidadE').style.display = 'none';
+            document.getElementById('DescripcionE').style.display = 'none';
+            document.getElementById('CaracteristicasE').style.display = 'none';
+            document.getElementById('MarcaE').style.display = 'none';
+            document.getElementById('ModeloE').style.display = 'none';
+            document.getElementById('TipoE').style.display = 'none';
+            document.getElementById('CapacidadE').style.display = 'none';
+            document.getElementById('vidaE').style.display = 'none';
+            // Se quitan los label de la interfaz agregar Equipo 
+            document.getElementById('CodigoEq').style.display = 'none';
+            document.getElementById('CantidadEq').style.display = 'none';
+            document.getElementById('DescripcionEq').style.display = 'none';
+            document.getElementById('CaracteristicasEq').style.display = 'none';
+            document.getElementById('MarcaEq').style.display = 'none';
+            document.getElementById('ModeloEq').style.display = 'none';
+            document.getElementById('TipoEq').style.display = 'none';
+            document.getElementById('CapacidadEq').style.display = 'none';
+            document.getElementById('vidaEq').style.display = 'none';
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <img src="Fotos/Titulo_Dinamico.png" class="rounded mx-auto d-block" alt="...">
+
+    <br>
+    <!--Datos-->
+    <div class="container-fluid">
+
+        <form class="row g-3">
+            <h4>
+                <label for="CodigoM" id="Codigo">Codigo de Material :</label>
+                <span class="border border-5">
+                      <input type="text" id="CodigoM"  placeholder="Ingrese id" >
+            </span>
+            </h4>
+            <h4>
+                <label for="NombreM" id="Nombre">Nombre :</label>
+                <span class="border border-5">
+           <input type="text" id="NombreM" placeholder="Ingrese Nombre"> 
+        </span>
+            </h4>
+            <h4>
+                <label for="unidadM" id="unidad">Unidad :</label>
+                <span class="border border-5">
+           <input type="number" id="unidadM" placeholder="0">
+           </span>
+            </h4>
+            <h4>
+
+                <label for="cantidadM" id="cantidad">Cantidad :</label>
+                <span class="border border-5">
+
+           <input type="number"  id="cantidadM" placeholder="0">
+        </span>
+            </h4>
+            <h4>
+                <label for="descripM" id="descrip">Descripción :</label>
+                <span class="border border-5">
+              <input type="text" id="descripM">
+          </span>
+            </h4>
+            <h4>
+                <label for="modeloM" id="Modelo">Modelo :</label>
+                <span class="border border-5">
+             <input type="text" id="modeloM" placeholder="Ingrese Modelo">
+           </span>
+            </h4>
+            <h4>
+                <label for="marcaM" id="Marca">Marca :</label>
+                <span class="border border-5">
+             <input type="text" id="marcaM" placeholder="Ingrese Marca">
+         </span>
+            </h4>
+            <h4>
+                <label for="tipoM" id="Tipo">Tipo :</label>
+                <span class="border border-5">
+              <input type="text" id="tipoM" placeholder="Ingrese Tipo">
+          </span>
+
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-outline-success">Agregar</button>
+                    <button onclick="limpiar()" type="button" class="btn btn-outline-danger">Eliminar</button>
+                    <button type="button" class="btn btn-outline-info" onclick="MostrarAgregarEquipo();"><</button>
+                </div>
+            </h4>
+        </form>
+
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="limpiarCampos.js"></script>
+</body>
+
+</html>
