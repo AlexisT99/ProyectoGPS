@@ -1,32 +1,32 @@
 <?php
 class Material{
     //atributos
-    public $idMaterial;
+    public $id_material;
     public $nombre;
     public $cantidad;
     public $unidad;
     public $descripcion;
-    public $fechaVencido;
+    public $fecha_vencido;
 
     /******Constructor******/ 
-    function __construct($idMaterial,$nombre,$cantidad,$unidad,$descripcion,$fechaVencido){
-        $this->idMaterial = $idMaterial;
+    function __construct($id_material,$nombre,$cantidad,$unidad,$descripcion,$fecha_vencido){
+        $this->id_material = $id_material;
         $this->nombre = $nombre;
         $this->cantidad = $cantidad;
         $this->unidad = $unidad;
         $this->descripcion = $descripcion;
-        $this->fechaVencido = $fechaVencido;
+        $this->fecha_vencido = $fecha_vencido;
     }// fin Constructor
 
 
 /************************Metodos get & set**********************/
 
     function getIdMaterial(){
-        return $this->idMaterial;
+        return $this->id_material;
     }//fin egtIdMaterial
 
-    function setIdMaterial($idMaterial){
-        $this->IdMaterial = $idMaterial;
+    function setIdMaterial($id_material){
+        $this->id_material = $id_material;
     }//fin setIdMaterial
 
 
@@ -67,11 +67,11 @@ class Material{
 
 
     function getFechaVencido(){
-        return $this->fechaVencido;
+        return $this->fecha_vencido;
     }//fin getFechaVencido
 
-    function setFechaVencido($fechaVencido){
-        $this->fechaVencido = $fechaVencido;
+    function setFechaVencido($fecha_vencido){
+        $this->fecha_vencido = $fecha_vencido;
     }//fin setFechaVencido
 
 }//fin class Material

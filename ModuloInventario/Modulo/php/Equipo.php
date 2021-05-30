@@ -2,33 +2,33 @@
 class Equipo{
     
     //atributos
-    public $numeroSerie;
+    public $numero_serie;
     public $descripcion;
     public $caracteristicas;
     public $marca;
     public $modelo;
     public $tipo;
-    public $idMant;
+    public $id_mant;
 
     /******Constructor******/
-    function __construct($numeroSerie,$descripcion,$caracteristicas,$marca,$modelo,$tipo,$idMant){
-        $this->numeroSerie = $numeroSerie;
+    function __construct($numero_serie,$descripcion,$caracteristicas,$marca,$modelo,$tipo,$id_mant){
+        $this->numero_serie = $numero_serie;
         $this->descripcion = $descripcion;
         $this->caracteristicas = $caracteristicas;
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->tipo = $tipo;
-        $this->idMant = $idMant
+        $this->id_mant = $id_mant
     }//fin del constructor
 
 /************************Metodos get & set**********************/
     
     function getNumeroSerie(){
-        return $this->numeroSerie;
+        return $this->numero_serie;
     }//fin getNumeroSerie
 
-    function setNumeroSerie($numeroSerie){
-        $this->numeroSerie = $numeroSerie;
+    function setNumeroSerie($numero_serie){
+        $this->numero_serie = $numero_serie;
     }//fin setNumeroSerie
 
    
@@ -78,11 +78,11 @@ class Equipo{
 
 
     function getIdMant(){
-        return $this->idMant;
+        return $this->id_mant;
     }//fin getId_Mant
 
-    function setId_Mant($idMant){
-        $this->idMant = $idMant;
+    function setIdMant($id_mant){
+        $this->id_mant = $id_mant;
     }//fin setId_Mant
 
 }//fin class Equipo
