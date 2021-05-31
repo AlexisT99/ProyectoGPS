@@ -18,7 +18,7 @@ class Equipo{
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->tipo = $tipo;
-        $this->id_mant = $id_mant
+        $this->id_mant = $id_mant;
     }//fin del constructor
 
 /************************Metodos get & set**********************/

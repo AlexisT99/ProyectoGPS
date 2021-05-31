@@ -17,8 +17,8 @@ class Material{
         $this->descripcion = $descripcion;
         $this->fecha_vencido = $fecha_vencido;
     }// fin Constructor
-
-
+    
+    
 /************************Metodos get & set**********************/
 
     function getIdMaterial(){
