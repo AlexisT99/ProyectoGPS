@@ -1,7 +1,10 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     31/05/2021 14:19:18                          */
+/* Created on:     02/06/2021 9:47:25                           */
 /*==============================================================*/
+
+
+
 
 /*==============================================================*/
 /* Table: CATALOGO_PRESUPUESTO                                  */
@@ -37,7 +40,7 @@ create table COSTOMANTENER
    IDGASTO              int  comment '',
    ID_MANTENIMIENTO     int  comment '',
    CODIGO_EQUIPO        varchar(16)  comment '',
-   MONTO                float  comment ''
+   MONTO_MANTENER       float  comment ''
 );
 
 /*==============================================================*/
@@ -108,7 +111,7 @@ create table GASTOS_SEGURO
 (
    IDGASTO              int  comment '',
    ID_SEGURO            varchar(50)  comment '',
-   MONTO                float  comment ''
+   MONTO_SEGURO         float  comment ''
 );
 
 /*==============================================================*/
@@ -342,7 +345,7 @@ create table REGISTRO_OBRAS
    FECHA_INICIO_OBRA    date  comment '',
    FECHA_FINAL_OBRA     date  comment '',
    STATUS_OBRA          varchar(50)  comment '',
-   COSTO                money  comment '',
+   COSTO                float  comment '',
    primary key (ID_OBRA)
 );
 
@@ -527,7 +530,7 @@ alter table GASTOS_SEGURO add constraint FK_GASTOS_S_REFERENCE_SEGURO foreign ke
 alter table GASTOS_SERVICIO add constraint FK_GASTOS_S_REFERENCE_SERVICIO foreign key (IDSERVICIO)
       references SERVICIOS (IDSERVICIO) on delete restrict on update restrict;
 
-alter table GASTOS_SERVICIO add constraint FK_GASTOS_S_REFERENCE_GASTOS foreign key (IDGASTO)
+alter table GASTOS_SERVICIO add constraint FK_GASTOS_SS_REFERENCE_GASTOS foreign key (IDGASTO)
       references GASTOS (IDGASTO) on delete restrict on update restrict;
 
 alter table INCIDENTES add constraint FK_INCIDENT_REFERENCE_REGISTRO foreign key (ID_OBRA)
@@ -539,7 +542,7 @@ alter table INCIDENTES add constraint FK_INCIDENT_REFERENCE_TRABAJAD foreign key
 alter table INFORME_MUESTREO add constraint FK_INFORME__REFERENCE_REGISTRO foreign key (ID_OBRA)
       references REGISTRO_OBRAS (ID_OBRA) on delete restrict on update restrict;
 
-alter table INFORME_RESISTENCIAS add constraint FK_INFORME__REFERENCE_REGISTRO foreign key (ID_OBRA)
+alter table INFORME_RESISTENCIAS add constraint FK_INFORMEE__REFERENCE_REGISTRO foreign key (ID_OBRA)
       references REGISTRO_OBRAS (ID_OBRA) on delete restrict on update restrict;
 
 alter table INGRESOS add constraint FK_INGRESOS_REFERENCE_REGISTRO foreign key (ID_OBRA)
