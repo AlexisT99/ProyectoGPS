@@ -1,10 +1,7 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     02/06/2021 9:47:25                           */
+/* Created on:     02/06/2021 21:37:35                          */
 /*==============================================================*/
-
-
-
 
 /*==============================================================*/
 /* Table: CATALOGO_PRESUPUESTO                                  */
@@ -49,7 +46,6 @@ create table COSTOMANTENER
 create table EQUIPO
 (
    CODIGO_EQUIPO        varchar(16) not null  comment '',
-   ID_MANTENIMIENTO     int  comment '',
    CANTIDAD_EQUIPO      int not null  comment '',
    DESCRIPCION_EQUIPO   varchar(100)  comment '',
    CARACTERISTICAS      varchar(100)  comment '',
@@ -219,6 +215,7 @@ create table INGRESOS
 create table MANTENIMIENTO
 (
    ID_MANTENIMIENTO     int not null auto_increment  comment '',
+   CODIGO_EQUIPO        varchar(16)  comment '',
    PROVEEDOR            varchar(50)  comment '',
    FECHA_PROX_M         date  comment '',
    ESTADO               varchar(20)  comment '',
@@ -494,9 +491,6 @@ alter table COSTOMANTENER add constraint FK_COSTOMAN_REFERENCE_MANTENIM foreign 
 alter table COSTOMANTENER add constraint FK_COSTOMAN_REFERENCE_EQUIPO foreign key (CODIGO_EQUIPO)
       references EQUIPO (CODIGO_EQUIPO) on delete restrict on update restrict;
 
-alter table EQUIPO add constraint FK_EQUIPO_REFERENCE_MANTENIM foreign key (ID_MANTENIMIENTO)
-      references MANTENIMIENTO (ID_MANTENIMIENTO) on delete restrict on update restrict;
-
 alter table EQUIPO_OBRA add constraint FK_EQUIPO_O_REFERENCE_EQUIPO foreign key (CODIGO_EQUIPO)
       references EQUIPO (CODIGO_EQUIPO) on delete restrict on update restrict;
 
@@ -550,6 +544,9 @@ alter table INGRESOS add constraint FK_INGRESOS_REFERENCE_REGISTRO foreign key (
 
 alter table INGRESOS add constraint FK_INGRESOS_REFERENCE_TRABAJAD foreign key (IDTRABAJADOR)
       references TRABAJADORES (IDTRABAJADOR) on delete restrict on update restrict;
+
+alter table MANTENIMIENTO add constraint FK_MANTENIM_REFERENCE_EQUIPO foreign key (CODIGO_EQUIPO)
+      references EQUIPO (CODIGO_EQUIPO) on delete restrict on update restrict;
 
 alter table MATERIAL_OBRA add constraint FK_MATERIAL_REFERENCE_MATERIAL foreign key (ID_MATERIAL)
       references MATERIAL (ID_MATERIAL) on delete restrict on update restrict;
