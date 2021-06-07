@@ -19,8 +19,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="/Vista/InterfazInventario_Equipo/index.html" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="/Vista/AgregarMaterial/index.html" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="/Vista/AgregarEquipo/index.html" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -40,23 +40,37 @@
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
                     <div>
                         <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Equipo</h1>
-                        <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 70px;">Codigo:</label><input type="text" id="txtCodigo" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input type="text" id="txtCodigo" style="width: 550px;"></p>
                         <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input type="text" id="txtCaracteristicas" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 6px;">Marca:</label><input type="text" id="txtMarca" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 62px;">Modelo:</label><input type="text" id="txtModelo" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 68px;">Tipo:</label><input type="text" id="txtTipo" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 24px;">Estado:</label><input type="text" id="txtEstado" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 2px;">Descripción:</label><textarea id="txtDescripcion"></textarea></p>
-                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento:</label><input type="text" id="txtFechaV" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 75px;">Costo Seguro:</label><input type="text" id="txtCostoS" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input type="text" id="txtMarca" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input type="text" id="txtModelo" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label><select id="cmbTipo">
+                                <optgroup label="This is a group">
+                                    <option value="12" selected="">No Maquinaria</option>
+                                    <option value="13">Maquinaria</option>
+                                </optgroup>
+                            </select></p>
+                        <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select id="cmbEstado">
+                                <optgroup label="This is a group">
+                                    <option value="12" selected="">Bueno</option>
+                                    <option value="13">Medio</option>
+                                    <option value="14">Malo</option>
+                                </optgroup>
+                            </select></p>
+                        <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea id="txtDescripcion"></textarea></p>
+                        <div style="border: 3px solid #764119;padding: 20px;">
+                            <h1 id="lblSeguro" style="padding-bottom: 25px;">Seguro</h1>
+                            <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 17px;">Fecha Vencimiento (DD/MM/AAAA):</label><input type="text" id="txtFechaV" style="width: 550px;"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 240px;">Costo Seguro:</label><input type="text" id="txtCostoS" style="width: 550px;"></p>
+                        </div>
                         <p><a class="btn btn-primary" role="button" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;">Guardar</a><a class="btn btn-primary" role="button" id="btnLimpiar" style="font-weight: bold;background: #17164D;width: 91px;">Limpiar</a><a class="btn btn-primary" role="button" id="btnCambio" style="font-weight: bold;background: white;margin: 13px;width: 91px;">&gt;</a></p>
                     </div>
-                    <div style="padding-left: 30px;">
+                    <div style="padding-left: 30px;height: 550px;border: 3px solid #764119;padding: 20px;">
                         <h1 id="lblMantenimiento" style="padding-bottom: 25px;">Mantenimiento</h1>
-                        <p style="padding-bottom: 0px;"><label id="lblProveedor" style="padding-right: 70px;">Proveedor:</label><input type="text" id="txtProveedor" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 70px;">Fecha Proxima Mantenimiento:</label><input type="text" id="txtFechaPM" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 70px;">Tipo Servicio:</label><input type="text" id="txtTipoServicio" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 70px;">Observaciones:</label><textarea id="txtObservaciones"></textarea></p>
+                        <p style="padding-bottom: 0px;"><label id="lblProveedor" style="padding-right: 410px;">Proveedor:</label><input type="text" id="txtProveedor" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento (DD/MM/AAAA):</label><input type="text" id="txtFechaPM" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 400px;">Tipo Servicio:</label><input type="text" id="txtTipoServicio" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 390px;">Observaciones:</label><textarea id="txtObservaciones"></textarea></p>
                     </div>
                 </div>
                 <footer>

@@ -123,43 +123,43 @@ div.social-links {
 }
 
 #txtCodigo {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtCaracteristicas {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtMarca {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtModelo {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtTipo {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtEstado {
-  width: 200px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtDescripcion {
-  width: 200px;
+  width: 150px;
   height: 100px;
   background: #B6CCD9;
   border-radius: 10px;
@@ -170,17 +170,13 @@ div.social-links {
   border: 5px solid #B6CCD9;
 }
 
-.table {
-  color: white;
-}
-
 .col-sm-6.col-md-4.item {
   background: lightgrey;
   border-right: 100px;
 }
 
 #txtBuscar {
-  width: 380px;
+  width: 180px;
   background: #B6CCD9;
   border-radius: 10px;
 }

@@ -113,198 +113,71 @@ div.social-links {
   margin-bottom: 5px;
 }
 
-#txtDescripcion {
-  width: 550px;
-  height: 100px;
-  background: #B6CCD9;
-  border-radius: 10px;
+#MenuIzquiedo {
+  padding-left: 50px;
+  padding-right: 150px;
 }
 
-#lblCodigo {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblCaracteristicas {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblMarca {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblModelo {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblTipo {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblEstado {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblDescripcion {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblFechaV {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblCostoS {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
+#main {
+  margin: auto;
 }
 
 #txtCodigo {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtCaracteristicas {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtMarca {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtModelo {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtTipo {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
 #txtEstado {
-  width: 550px;
+  width: 150px;
   background: #B6CCD9;
   border-radius: 40px;
 }
 
-#txtFechaV {
-  width: 550px;
+#txtDescripcion {
+  width: 150px;
+  height: 100px;
   background: #B6CCD9;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
-#txtCostoS {
-  width: 550px;
+#tblObjeto {
+  background-color: #17164D;
+  border: 5px solid #B6CCD9;
+}
+
+.col-sm-6.col-md-4.item {
+  background: lightgrey;
+  border-right: 100px;
+}
+
+#txtBuscar {
+  width: 180px;
   background: #B6CCD9;
-  border-radius: 40px;
-}
-
-#btnGuardar {
-  box-sizing: border-box;
-  border-radius: 8px;
-  color: #18A0FB;
-  border: 1px solid #18A0FB;
-}
-
-#lblAgregarE {
-  color: #764119;
-}
-
-#btnCambio {
-  color: #18A0FB;
-  font-size: 1.5rem;
-  border: 1px solid #18A0FB;
-  border-radius: 20px;
-  text-align: center;
-  margin-left: 200px;
-}
-
-#btnLimpiar {
-  border: 2px solid white;
-  border-radius: 8px;
-}
-
-#lblIdMantenimiento {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#txtIdMantenimiento {
-  width: 550px;
-  background: #B6CCD9;
-  border-radius: 40px;
-}
-
-#lblNombre {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblUnidad {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#lblCantidad {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  color: #764119;
-}
-
-#txtNombre {
-  width: 550px;
-  background: #B6CCD9;
-  border-radius: 40px;
-}
-
-#txtUnidad {
-  width: 550px;
-  background: #B6CCD9;
-  border-radius: 40px;
-}
-
-#txtCantidad {
-  width: 550px;
-  background: #B6CCD9;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 

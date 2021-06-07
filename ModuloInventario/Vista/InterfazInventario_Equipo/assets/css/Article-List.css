@@ -135,3 +135,83 @@ h1 {
   font-size: 0.7rem;
 }
 
+.tabla-bar tbody {
+}
+
+.table.tabla-bar tbody {
+  height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.tabla-bar thead, .tabla-bar tbody, .tabla-bar td, .tabla-bar th {
+  display: block;
+}
+
+.tabla-bar tbody td, .tabla-bar thead > tr > th {
+  float: left;
+  border-bottom-width: 0;
+}
+
+.intro {
+  width: auto;
+}
+
+#tblEquipo {
+  width: 650px;
+}
+
+#ventanaDerecha {
+  width: 350px;
+}
+
+main {
+  display: flex;
+}
+
+#lblObjeto {
+  color: white;
+}
+
+#lblCodigo {
+  color: white;
+}
+
+#lblCaracteristicas {
+  color: white;
+}
+
+#lblMarca {
+  color: white;
+}
+
+#lblModelo {
+  color: white;
+}
+
+#lblTipo {
+  color: white;
+}
+
+#lblEstado {
+  color: white;
+}
+
+#lblDescripcion {
+  color: white;
+}
+
+#btnBusqueda {
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #18A0FB;
+  border: 1px solid #18A0FB;
+}
+
+#btnLimpiar {
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #18A0FB;
+  border: 1px solid #18A0FB;
+}
+

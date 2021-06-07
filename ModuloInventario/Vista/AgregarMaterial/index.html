@@ -19,8 +19,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="/Vista/InterfazInventario_Equipo/index.html" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="/Vista/AgregarMaterial/index.html" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="/Vista/AgregarEquipo/index.html" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -39,13 +39,22 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
                     <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Material</h1>
-                    <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 70px;">Id Material:</label><input type="text" id="txtIdMantenimiento" style="width: 550px;"></p>
-                    <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 11px;">Nombre:</label><input type="text" id="txtNombre" style="width: 550px;"></p>
-                    <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 6px;">Unidad:</label><input type="text" id="txtUnidad" style="width: 550px;"></p>
-                    <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 62px;">Cantidad:</label><input type="text" id="txtCantidad" style="width: 550px;"></p>
+                    <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input type="text" id="txtIdMantenimiento" style="width: 550px;"></p>
+                    <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input type="text" id="txtNombre" style="width: 550px;"></p>
+                    <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select id="cmbUnidad">
+                            <optgroup label="This is a group">
+                                <option value="12">(Kg)Kilogramo</option>
+                                <option value="13">(g)Gramo</option>
+                                <option value="14">(mg)Miligramo</option>
+                                <option value="15" selected="">(L)Litros</option>
+                                <option value="16">(ml)Mililitros</option>
+                                
+                            </optgroup>
+                        </select></p>
+                    <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input type="text" id="txtCantidad" style="width: 550px;"></p>
                     <p style="padding-bottom: 0px;"></p>
-                    <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 2px;">Descripción:</label><textarea id="txtDescripcion"></textarea></p>
-                    <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento:</label><input type="text" id="txtFechaV" style="width: 550px;"></p>
+                    <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 85px;">Descripción:</label><textarea id="txtDescripcion"></textarea></p>
+                    <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento (DD/MM/AAAA):</label><input type="text" id="txtFechaV" style="width: 550px;"></p>
                     <p style="padding-bottom: 0px;"></p>
                     <p style="padding-bottom: 0px;"></p>
                     <p><a class="btn btn-primary" role="button" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;">Guardar</a><a class="btn btn-primary" role="button" id="btnLimpiar" style="font-weight: bold;background: #17164D;width: 91px;">Limpiar</a><a class="btn btn-primary" role="button" id="btnCambio" style="font-weight: bold;background: white;margin: 13px;width: 91px;">&lt;</a></p>
