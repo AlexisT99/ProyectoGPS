@@ -1,30 +1,46 @@
 <?php 
 include("ModuloConexionBD.php");
 //Recibir datos de Equipo
-$Codigo_Equipo   = $_POST['Codigo_Equipo'];
-$Descripcion     = $_POST['Descripcion'];
-$Caracteristicas = $_POST['Caracteristicas'];
-$Marca           = $_POST['Marca'];
-$Modelo          = $_POST['Modelo'];
-$Tipo            = $_POST['Tipo'];
-$Id_Mant         = $_POST['Id_Mant'];
+$codigo_Equipo   = $_POST["txtCodigo"];
+$caracteristicas = $_POST["txtCaracteristicas"];
+$marca           = $_POST["txtMarca"];
+$modelo          = $_POST["txtModelo"];
+$tipo            = $_POST["cmbTipo"];
+$estado          = $_POST["cmbEstado"];
+$id_Mant         = $_POST["Id_Mant"];
+$descripcion     = $_POST["txtDescripcion"];
 
 
+function insertar_Equipo(){
 //consulta para insertar 
-$insertar = "Insert into""(Codigo_Equipo,Descripcion,Caracteristicas,Marca,Modelo,Tipo,Id_Mant)" 
-values ('$Codigo_Equipo','$Descripcion','$Caracteristicas','$Marca','$Modelo','$Tipo','$Id_Mant');
-//Consulta para Actualizar
-$Actualizar = "UPDATE Equipo 
-    set'Codigo_Equipo='$Codigo_Equipo',Descripcion='$Descripcion',Caracteristicas='$Caracteristicas',
-        Marca='$Marca',Modelo='$Marca',Tipo='$Tipo',Id_Mant='$Id_Mant'";
+ $insertar = "INSERT INTO Equipo (Codigo_Equipo,Caracteristicas,Marca,Modelo,Tipo,Estado,Descripcion) 
+              VALUES ('$codigo_Equipo','$caracteristicas','$marca','$modelo','$tipo','$estado','$descripcion'");
+
 //Realizar Insert
-$resultado = mysqli_query($conection,$insertar)
-if(!$resultado){
+ $resultado = mysqli_query($conection,$insertar)
+ if(!$resultado){
     echo 'error al realizar el registro';
-}else {
-    echo 'Material agregado'
-}
-//Realizar Actualizacion 
+ }else {
+    echo 'Material agregado';
+    mysqli_close($conection);
+ }
+}//funcion insertar
+function actualizar_Equipo(){
+    //Consulta para Actualizar
+     $Actualizar = "UPDATE Equipo 
+            SET Caracteristicas  = '$caracteristicas', Marca = '$marca', Modelo = '$modelo ', Tipo = '$tipo'
+                , estado = '$estado', Descripcion = '$descripcion' 
+               WHERE Codigo_Equipo = '$codigo_Equipo'";
+    //Realizar Actualizacion 
+     $resultado2 = mysqli_query ($conection,$Actualizar);
+     if (!$resultado2){
+        echo 'Error al momdificar';
+     }else{
+        echo 'Equipo actualizado';
+        mysqli_close($conection);
+     }
+}//funcion actualizar
+
 $resultado2 = mysqli_query ($conection,$Actualizar);
 if (!$resultado2){
     echo 'Error al momdificar'
