@@ -25,8 +25,8 @@ values ('$codigo_Equipo','$descripcion','$caracteristicas','$marca','$modelo  ',
                                   values ('$codigo_Equipo','$fechav','$costos');
  $resultado2= mysqli_query ( $conexión ,  $sqltablas ) ;
 if ($resultado2 == 1){
-$sqltablam = " insert into MANTENIMIENTO (CODIGO_EQUIPO,PROVEEDOR,FECHA_PROX_M,TIPO_SERVICIO, OBSERVACIONES )"
-values ('$codigo_Equipo','$provedor','$fechapm ','$tipoS ','$obser');
+$sqltablam = " insert into MANTENIMIENTO (CODIGO_EQUIPO,PROVEEDOR,FECHA_PROX_M,TIPO_SERVICIO, OBSERVACIONES,ESTADO )"
+values ('$codigo_Equipo','$provedor','$fechapm ','$tipoS ','$obser','$estado');
  $resultado3= mysqli_query ( $conexión ,  $sqltablam ) ;  
 
 
