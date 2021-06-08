@@ -5,7 +5,7 @@ include("/Modulo/ModuloEquipo.php");
 
 
 class InterfazControlador{
-
+    
 }
 
 ?>
