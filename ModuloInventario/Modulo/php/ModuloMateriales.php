@@ -1,34 +1,43 @@
 <?php 
 include("ModuloConexionBD.php");
 //Recibir dato de Material
-$Id_Material     =$_POST['Id_Material'];
-$nombre          =$_POST['Nombre'];
-$Cantidad        =$_POST['Cantidad'];
-$Unidad          =$_POST['Unidad'];
-$Descripcion     =$_POST['Descripcion'];
-$Fecha_Vencido   =$_POST['Fecha_Vencido'];
+$id_Material     =$_POST["txtIdMantenimiento"];
+$nombre          =$_POST["txtNombre"];
+$unidad          =$_POST["cmdUnidad"];
+$cantidad        =$_POST["txtCantidad"];
+$descripcion     =$_POST["txtDescripcion"];
+$fecha_Vencido   =$_POST["txtFechaV"];
 
+function insertar_Material(){
 //consulta para insertar 
-$insertar = "Insert into Material""(Id_Material,Nombre,Cantidad,Unidad,Descripcion,Fecha_Vencido)" 
-values ('$Id_Material','$Nombre','$Cantidad','$Unidad','$Descripcion','$Fecha_Vencido');
-//Consulta para Actualizar
-$Actualizar = "UPDATE Material 
-    set'Id_Material='$Id_Material',Nombre='$Nombre',Cantidad='$Cantidad',
-        Unidad='$Unidad',Descripcion='$Descripcion',Fecha_Vencido='$Fecha_Vencido'";
+$insertar = "INSERT INTO Material (Id_Material,Nombre,Unidad,Cantidad,Descripcion,Fecha_Vencido)
+VALUES ('$id_Material','$nombre','$unidad','$cantidad','$descripcion','$fecha_Vencido'");
+
 //Realizar Insert
-$resultado = mysqli_query($conection,$insertar)
-if(!$resultado){
+ $resultado = mysqli_query($conection,$insertar)
+ if(!$resultado){
     echo 'error al realizar el registro';
-}else {
-    echo 'Material agregado'
-}
-//Realizar Actualizacion 
-$resultado2 = mysqli_query ($conection,$Actualizar);
-if (!$resultado2){
-    echo 'Error al momdificar'
-}else{
-    echo 'Equipo actualizado';
-}
+ }else {
+    echo 'Material agregado';
+    mysqli_close($conection);
+ }
+}//funcion
+function Actulizar_Material(){
+    //Consulta para Actualizar
+     $Actualizar = "UPDATE Material 
+            SET Nombre = '$nombre', Unidad = '$unidad', Cantidad = '$cantidad', Descripcion = '$descripcion', Fecha_Vencido = '$fecha_Vencido' 
+               WHERE id_Material = '$id_Material'";
+    
+    //Realizar Actualizacion 
+     $resultado2 = mysqli_query ($conection,$Actualizar);
+     if (!$resultado2){
+        echo 'Error al momdificar';
+     }else{
+        echo 'Equipo actualizado';
+        mysqli_close($conection);
+     }
+}//Actualizar
+
 //Realizar Visualizacion
 $Visualizar="SELECT * from Material";
  $result=mysqli_query($conexion,$Visualizar);
