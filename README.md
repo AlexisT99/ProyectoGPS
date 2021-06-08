@@ -1,2 +1,0 @@
-# ProyectoGPS
-Proyecto GPS
