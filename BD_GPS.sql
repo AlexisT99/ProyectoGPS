@@ -46,7 +46,6 @@ create table COSTOMANTENER
 create table EQUIPO
 (
    CODIGO_EQUIPO        varchar(16) not null  comment '',
-   CANTIDAD_EQUIPO      int not null  comment '',
    DESCRIPCION_EQUIPO   varchar(100)  comment '',
    CARACTERISTICAS      varchar(100)  comment '',
    MARCA_EQUIPO         varchar(50)  comment '',
