@@ -2,7 +2,6 @@
 class Mantenimiento{
     
     //atributos
-    public $id_mantenimiento;
     public $proveedor;
     public $fecha_prox_m;
     public $estado;
@@ -11,8 +10,7 @@ class Mantenimiento{
     public $codigo_equipo;
 
     /******Constructor******/
-    function __construct($id_mantenimiento,$proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$codigo_equipo){
-        $this->id_mantenimiento = $id_mantenimiento;
+    function __construct($proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$codigo_equipo){
         $this->proveedor = $proveedor;
         $this->fecha_prox_m = $fecha_prox_m;
         $this->estado = $estado;
@@ -22,15 +20,6 @@ class Mantenimiento{
     }//fin del constructor
 
 /************************Metodos get & set**********************/
-    
-    function getIdMantenimiento(){
-        return $this->id_mantenimiento;
-    }//fin getIdMantenimiento
-
-    function setIdMantenimiento($id_mantenimiento){
-        $this->id_mantenimiento = $id_mantenimiento;
-    }//fin setIdMantenimiento
-   
     function getProveedor(){  
         return $this->proveedor;
     }//fin getProveedor

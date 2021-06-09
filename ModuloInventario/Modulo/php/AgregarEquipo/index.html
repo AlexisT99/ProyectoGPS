@@ -38,25 +38,24 @@
             </div>
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
-                    <form style="display: flex;">
+                    <form style="display: flex;" action = "../InterfazControlador.php" method="POST" enctype="multipart/form-data">
                         <div>
                             <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Equipo</h1>
                             <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" style="width: 550px;"></p>
                             <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input class="form-control" type="text" id="txtCaracteristicas" style="width: 550px;"></p>
                             <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input class="form-control" type="text" id="txtMarca" style="width: 550px;"></p>
                             <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" style="width: 550px;"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label><select class="form-control" id="cmbTipo">
+                            <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label>
+                                <select class="form-control" id="cmbTipo">
                                     <optgroup label="This is a group">
-                                        <option value="12" selected="">This is item 1</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
+                                        <option value="13">auto</option>
+                                        <option value="14">no auto</option>
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select class="form-control" id="cmbEstado">
                                     <optgroup label="This is a group">
-                                        <option value="12" selected="">This is item 1</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
+                                        <option value="13">Bueno</option>
+                                        <option value="14">Viejo</option>
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion"></textarea></p>
@@ -74,6 +73,7 @@
                             <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 17px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;"></p>
                             <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 240px;">Costo Seguro:</label><input class="form-control" type="text" id="txtCostoS" style="width: 550px;"></p>
                         </div>
+
                     </form>
                 </div>
                 <footer>
