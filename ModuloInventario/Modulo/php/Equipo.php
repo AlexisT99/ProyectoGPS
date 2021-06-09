@@ -79,18 +79,18 @@ class Equipo{
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
         //insserar a la base de datos un equipo
-        $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion',$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
+        $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
         $resultado = mysqli_query ($conexión,$query );
     }//fin insertar
 
     function actualizar(){
-        $query = "UPDATE Equipo  SET Caracteristicas  = '$this->caracteristicas', Marca = '$this->marca', Modelo = '$this->modelo ', Tipo = '$this->tipo'
+        $query = "UPDATE Equipo  SET Caracteristicas  = '$this->caracteristicas', Marca = '$this->marca', Modelo = '$this->modelo', Tipo = '$this->tipo'
            ,Descripcion = '$this->descripcion' WHERE Codigo_Equipo = '$this->codigo_Equipo'";
            $resultado = mysqli_query ($conexión,$query );
     }//fin actualizar
 
     function eliminar(){
-        $query  = "DELETE FROM  Equipo WHERE Codigo_Equipo = $this->codigo_equipo";
+        $query  = "DELETE FROM  Equipo WHERE Codigo_Equipo = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
     
