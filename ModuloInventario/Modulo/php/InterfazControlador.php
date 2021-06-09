@@ -19,12 +19,5 @@ require 'Equipo.php';
     /*Condiciones para agregar a mantenimiento o a seguro */
    
             $equipo->insertar();
-    echo 'codigo = '.$equipo->getCodigoEquipo();
-    echo 'codigo = '.$_POST['cmbTipo'];    
-    
-
-    
-
-
-
+   
 ?>

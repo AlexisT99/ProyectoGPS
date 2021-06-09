@@ -99,6 +99,7 @@ class Equipo{
     
 }//fin class Equipo
 
-$objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
-$objeto1->insertar();
+
+//$objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
+//$objeto1->insertar();
 ?>
