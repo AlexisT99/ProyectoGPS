@@ -8,7 +8,7 @@ class database {
         {
             //Formato de la conexion "Servidor","Usuario","contraseña"
             $this->conexion = (mysqli_connect("localhost","root","")) or die(mysqli_error());
-            mysqli_select_db($this->conexion,"dynasoft") or die(mysqli_error($this->conexion));
+            mysqli_select_db($this->conexion,"mysql 5.0") or die(mysqli_error($this->conexion));
         }
         return $this->conexion;
     } 
