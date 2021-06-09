@@ -354,3 +354,16 @@ div.social-links {
   color: white;
 }
 
+#txtSeguro {
+  width: 550px;
+  background: #B6CCD9;
+  border-radius: 40px;
+}
+
+#lblSeguro2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: #764119;
+}
+
