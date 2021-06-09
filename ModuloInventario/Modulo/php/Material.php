@@ -79,8 +79,8 @@ class Material{
         $conexion = mysqli_connect("localhost","root","","inventario");
         $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
         $HOLA = mysqli_query($conexion,$query);
-        echo '$HOLA';
-        if($HOLA){
+        
+        if(!$HOLA){
             //consulta para insertar 
             $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";

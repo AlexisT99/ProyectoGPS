@@ -80,6 +80,7 @@ class Mantenimiento{
     }//fin setCodigoEquipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
         //inserar a la base de datos un Mantenimiento
         $query = "INSERT INTO Mantenimiento(Proveedor,Fecha_Prox_M,Estado,Observaciones,Tipo_Servicio,Codigo_Equipo) 
             VALUES('$this->proveedor','$this->fecha_prox_m','$this->estado','$this->observaciones','$this->tipo_servicio','$this->codigo_equipo')";
@@ -87,19 +88,21 @@ class Mantenimiento{
     }//fin insertar
 
     function actualizar(){
-        $query = "UPDATE Mantenimiento 
-            SET Proveedor  = '$this->proveedor', Fecha_Prox_M = '$this->fecha_prox_m', Estado = '$this->estado', Observaciones = '$this->observaciones', Tipo_Servicio = '$this->tipo_servicio', Codigo_Equipo = '$this->codigo_equipo'
-            WHERE Id_Mant = '$this->id_mantenimiento'";
-        $resultado = mysqli_query ($conexion,$query );
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "UPDATE Mantenimiento SET PROVEEDOR = '$this->proveedor', FECHA_PROX_M = '$this->fecha_prox_m', ESTADO = '$this->estado', OBSERVACIONES = '$this->observaciones', TIPO_SERVICIO = '$this->tipo_servicio'
+            WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+        $resultado = mysqli_query ($conexion,$query);
     }//fin actualizar
 
     function eliminar(){
-        $query  = "DELETE FROM Mantenimiento WHERE Id_Mant = '$this->id_mantenimiento'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM Mantenimiento WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Mantenimiento
-($id_mantenimiento,$proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$codigo_equipo)
-$objeto1 = new Mantenimiento();
+
+$objeto1 = new Mantenimiento("12AB","Pepe","2021-06-08","Soltero","Ninguna","A","1234A");
+
 $objeto1->insertar();
 
 ?>

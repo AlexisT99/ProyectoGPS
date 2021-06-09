@@ -78,14 +78,14 @@ class Equipo{
     }//fin setTipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
-        
+        $conexion = mysqli_connect("localhost","root","","inventario");
         //insserar a la base de datos un equipo
         $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
     function actualizar(){
-        
+        $conexion = mysqli_connect("localhost","root","","inventario");
         $query = "UPDATE Equipo  SET CARACTERISTICAS  = '$this->caracteristicas', MARCA_EQUIPO = '$this->marca', MODELO_EQUIPO = '$this->modelo', TIPO_EQUIPO = '$this->tipo',
             DESCRIPCION_EQUIPO = '$this->descripcion' WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
            $resultado = mysqli_query ($conexion,$query );
@@ -100,5 +100,6 @@ class Equipo{
 }//fin class Equipo
 
 $objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
-$objeto1->eliminar();
+$objeto1->setDescripcion("Aun que no");
+$objeto1->actualizar();
 ?>

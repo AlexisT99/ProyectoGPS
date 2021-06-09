@@ -52,20 +52,25 @@ class Seguro{
     }//fin setCostoSeguro
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
         //insserar a la base de datos un Seguro
-        $query = "INSERT INTO Seguro(Codigo_Equipo,Fecha_Vencido,Costo_Seguro) VALUES('$this->codigo_equipo','$this->fecha_vencido','$this->costo_seguro')";
+        $query = "INSERT INTO Seguro VALUES('$this->id_seguro','$this->codigo_equipo','$this->fecha_vencido','$this->costo_seguro')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
     function actualizar(){
-        $query = "UPDATE Seguro  SET Codigo_Equipo  = '$this->codigo_equipo', Fecha_Vencido = '$this->fecha_vencido', Costo_Seguro = '$this->costo_seguro'
-            WHERE Id_Seguro = '$this->id_seguro'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "UPDATE Seguro  SET CODIGO_EQUIPO  = '$this->codigo_equipo', FECHA_VENCIDO = '$this->fecha_vencido', COSTO_SEGURO = '$this->costo_seguro'
+            WHERE ID_SEGURO = '$this->id_seguro'";
         $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){
-        $query  = "DELETE FROM  Seguro WHERE Id_Seguro = '$this->id_seguro'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM  Seguro WHERE ID_SEGURO = '$this->id_seguro'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Seguro
+$objeto1 = new Seguro("1","1234A","2021/06/09","13");
+$objeto1->insertar();
 ?>
