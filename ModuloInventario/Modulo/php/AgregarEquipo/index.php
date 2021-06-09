@@ -41,12 +41,12 @@
                     <form style="display: flex;" action = "../InterfazControlador.php" method="POST" enctype="multipart/form-data">
                         <div>
                             <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Equipo</h1>
-                            <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" style="width: 550px;"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input class="form-control" type="text" id="txtCaracteristicas" style="width: 550px;"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input class="form-control" type="text" id="txtMarca" style="width: 550px;"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" style="width: 550px;"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" name = "txtCodigo" style="width: 550px;"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input class="form-control" type="text" id="txtCaracteristicas" name="txtCaracteristicas" style="width: 550px;"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input class="form-control" type="text" id="txtMarca" name ="txtMarca"style="width: 550px;"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" name = "txtModelo"style="width: 550px;"></p>
                             <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label>
-                                <select class="form-control" id="cmbTipo">
+                                <select class="form-control" id="cmbTipo" name = "cmbTipo">
                                     <optgroup label="This is a group">
                                         <option value="13">auto</option>
                                         <option value="14">no auto</option>
@@ -58,7 +58,7 @@
                                         <option value="14">Viejo</option>
                                     </optgroup>
                                 </select></p>
-                            <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion"></textarea></p>
+                            <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
                             <p><input class="form-control-file" type="submit" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;" value="Agregar"><input class="form-control-file" type="submit" id="btnLimpiar" style="font-weight: bold;background: #17164D;margin-left: 12px;border-radius: 10px;" value="Limpiar"><input class="form-control-file" type="submit" id="btnCambio" style="font-weight: bold;background: white;margin: 13px;" value=">"></p>
                         </div>
                         <div style="padding-left: 30px;height: 550px;border: 3px solid #764119;padding: 20px;">

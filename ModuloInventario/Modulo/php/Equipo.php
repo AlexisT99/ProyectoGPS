@@ -24,11 +24,11 @@ class Equipo{
 
 /************************Metodos get & set**********************/
     
-    function getNumeroSerie(){
+    function getCodigoEquipo(){
         return $this->codigo_equipo;
     }//fin getNumeroSerie
 
-    function setNumeroSerie($codigo_equipo){
+    function setCodigoEquipo($codigo_equipo){
         $this->codigo_equipo = $codigo_equipo;
     }//fin setNumeroSerie
 
@@ -78,9 +78,9 @@ class Equipo{
     }//fin setTipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect('localhost','root','','inventario');
         //insserar a la base de datos un equipo
-        $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
+        $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
@@ -98,8 +98,7 @@ class Equipo{
     }//fin elimininar
     
 }//fin class Equipo
-/*
+
 $objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
-$objeto1->setDescripcion("Aun que no");
-$objeto1->actualizar();*/
+$objeto1->insertar();
 ?>
