@@ -20,8 +20,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -42,11 +42,7 @@
                     <main>
                         <div style="display: flex;">
                             <div id="ventanaDerecha">
-                                <div>
-                                    <div class="btn-toolbar">
-                                        <div class="btn-group" role="group"><button class="btn btn-primary" id="btnMaterial" type="button" style="font-weight: bold;background: white;margin: 13px;width: inherit;">Material</button><button class="btn btn-primary" id="btnEquipo" type="button" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;">Equipo</button></div>
-                                    </div>
-                                </div>
+                                <div><input type="submit" id="btnMaterial" value="Materia" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEquipo" value="Equipo" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"></div>
                                 <div>
                                     <div class="table-responsive" id="tblObjeto">
                                         <table class="table">
@@ -90,7 +86,7 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <div><input type="text" id="txtBuscar"><button class="btn btn-primary" id="btnBuscar" type="button" style="font-weight: bold;background: white;margin: 10px;width: inherit;">Buscar</button></div>
+                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"></div>
                                             <h2 class="text-center">MATERIAL</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
@@ -107,9 +103,7 @@
                                                     <tbody></tbody>
                                                 </table>
                                             </div>
-                                            <div class="btn-toolbar">
-                                                <div class="btn-group" role="group"><button class="btn btn-primary" id="btnLimpiar" type="button" style="font-weight: bold;background: white;margin: 10px;width: inherit;">Limpiar</button><button class="btn btn-primary" id="btnEliminar" type="button" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;">Eliminar</button><button class="btn btn-primary" id="btnModificar" type="button" style="font-weight: bold;background: white;margin: 10px;width: inherit;">Modificar</button><button class="btn btn-primary" id="btnAgregar" type="button" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;">Agregar</button></div>
-                                            </div>
+                                            <div><input type="submit" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEliminar" value="Eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnAgregar" value="Agregar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"></div>
                                         </div>
                                     </div>
                                 </section>
