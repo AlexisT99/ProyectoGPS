@@ -98,4 +98,8 @@ class Mantenimiento{
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Mantenimiento
+($id_mantenimiento,$proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$codigo_equipo)
+$objeto1 = new Mantenimiento();
+$objeto1->insertar();
+
 ?>

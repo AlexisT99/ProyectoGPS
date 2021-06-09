@@ -76,8 +76,11 @@ class Material{
 
 /*************************** METODOS MYSQL *********************************************************************/
     function insertar(){
-        
-        if(true){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
+        $HOLA = mysqli_query($conexion,$query);
+        echo '$HOLA';
+        if($HOLA){
             //consulta para insertar 
             $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
@@ -91,9 +94,9 @@ class Material{
     }//fin insertar
 
     function actualizar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
-        $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material, NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
-                  CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->fecha_vencido' WHERE ID_MATERIAL = '$this->id_material'";
+        
+        $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material', NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
+                  CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->descripcion' WHERE ID_MATERIAL = '$this->id_material'";
         //Realizar Actualizacion 
         $resultado = mysqli_query ($conexion,$query);
         if (!$resultado){ echo 'Error al modificar';} 
@@ -106,18 +109,13 @@ class Material{
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
 /*
-    function boolean buscar(){
-        conectar();
-        $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
-        return mysqli_query($conexion,$query);
+    function buscar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        
     }//fin buscar
 */
-    function conectar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
-    }
 }//fin class Material
 
-$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","08/06/2021");
-$objeto1->setDescripcion("Mama no tenemos papel");
-$objeto1->actualizar();
+$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");
+$objeto1->insertar();
 ?>
