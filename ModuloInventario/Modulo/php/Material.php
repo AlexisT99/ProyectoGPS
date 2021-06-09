@@ -76,37 +76,48 @@ class Material{
 
 /*************************** METODOS MYSQL *********************************************************************/
     function insertar(){
-        if(buscar()){
+        
+        if(true){
             //consulta para insertar 
-            $query= "INSERT INTO Material (Id_Material,Nombre,Unidad,Cantidad,Descripcion,Fecha_Vencido)
+            $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
             //Realizar Insert
             $resultado = mysqli_query($conexion,$query);
         }else{
-            $query = "UPDATE Material SET Cantidad = Cantidad + 1 WHERE Id_Material = '$this->id_material and Cantidad > 0'"
-            $resultado = mysqli($conexion,$query);
+            $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL + 1 WHERE Id_Material = '$this->id_material and CANTIDAD_MATERIAL > 0'";
+            $resultado = mysqli_query($conexion,$query);
         }//fin else
         mysqli_close($conexion);
     }//fin insertar
 
     function actualizar(){
-        $query = "UPDATE  Material SET Id_Material = '$this->id_material, Nombre = '$this->nombre', Unidad ='$this->unidad',
-                  Cantidad = '$this->cantidad',Descripcion = '$this->fecha_vencido' WHERE Id_Material = '$this->id_material'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material, NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
+                  CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->fecha_vencido' WHERE ID_MATERIAL = '$this->id_material'";
         //Realizar Actualizacion 
         $resultado = mysqli_query ($conexion,$query);
-        if (!$resultado){ echo 'Error al momdificar';} 
+        if (!$resultado){ echo 'Error al modificar';} 
         else {echo 'Equipo actualizado';}
         mysqli_close($conexion);
     }//fin actualizar
 
     function disminuir(){
-        $query = "UPDATE Material SET Cantidad = Cantidad-1 WHERE Id_Material = '$this->id_material and Cantidad > 0'"
-        $resultado = mysqli($conexion,$query);
+        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE Id_Material = '$this->id_material and CANTIDAD_MATERIAL > 0'";
+        $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
-
+/*
     function boolean buscar(){
-        $query = "SELECT * FROM Material WHERE Id_Material = '$this->id_material'"
-        return mysqli($conexion,$query);
+        conectar();
+        $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
+        return mysqli_query($conexion,$query);
     }//fin buscar
+*/
+    function conectar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+    }
 }//fin class Material
+
+$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","08/06/2021");
+$objeto1->setDescripcion("Mama no tenemos papel");
+$objeto1->actualizar();
 ?>

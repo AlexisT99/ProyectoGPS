@@ -83,14 +83,14 @@ class Mantenimiento{
         //inserar a la base de datos un Mantenimiento
         $query = "INSERT INTO Mantenimiento(Proveedor,Fecha_Prox_M,Estado,Observaciones,Tipo_Servicio,Codigo_Equipo) 
             VALUES('$this->proveedor','$this->fecha_prox_m','$this->estado','$this->observaciones','$this->tipo_servicio','$this->codigo_equipo')";
-        $resultado = mysqli_query ($conexión,$query );
+        $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
     function actualizar(){
         $query = "UPDATE Mantenimiento 
             SET Proveedor  = '$this->proveedor', Fecha_Prox_M = '$this->fecha_prox_m', Estado = '$this->estado', Observaciones = '$this->observaciones', Tipo_Servicio = '$this->tipo_servicio', Codigo_Equipo = '$this->codigo_equipo'
             WHERE Id_Mant = '$this->id_mantenimiento'";
-        $resultado = mysqli_query ($conexión,$query );
+        $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){

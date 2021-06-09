@@ -11,7 +11,7 @@ class Equipo{
     public $tipo;
 
     //varibles globales
-    $conexion;
+    
     /******Constructor******/
     function __construct($codigo_equipo,$descripcion,$caracteristicas,$marca,$modelo,$tipo){
         $this->codigo_equipo = $codigo_equipo;
@@ -78,21 +78,27 @@ class Equipo{
     }//fin setTipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
+        
         //insserar a la base de datos un equipo
         $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
-        $resultado = mysqli_query ($conexión,$query );
+        $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
     function actualizar(){
-        $query = "UPDATE Equipo  SET Caracteristicas  = '$this->caracteristicas', Marca = '$this->marca', Modelo = '$this->modelo', Tipo = '$this->tipo'
-           ,Descripcion = '$this->descripcion' WHERE Codigo_Equipo = '$this->codigo_Equipo'";
-           $resultado = mysqli_query ($conexión,$query );
+        
+        $query = "UPDATE Equipo  SET CARACTERISTICAS  = '$this->caracteristicas', MARCA_EQUIPO = '$this->marca', MODELO_EQUIPO = '$this->modelo', TIPO_EQUIPO = '$this->tipo',
+            DESCRIPCION_EQUIPO = '$this->descripcion' WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+           $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){
-        $query  = "DELETE FROM  Equipo WHERE Codigo_Equipo = '$this->codigo_equipo'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM  Equipo WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
     
 }//fin class Equipo
+
+$objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
+$objeto1->eliminar();
 ?>

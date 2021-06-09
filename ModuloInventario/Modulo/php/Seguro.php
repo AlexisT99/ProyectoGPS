@@ -54,13 +54,13 @@ class Seguro{
     function insertar(){
         //insserar a la base de datos un Seguro
         $query = "INSERT INTO Seguro(Codigo_Equipo,Fecha_Vencido,Costo_Seguro) VALUES('$this->codigo_equipo','$this->fecha_vencido','$this->costo_seguro')";
-        $resultado = mysqli_query ($conexión,$query );
+        $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
 
     function actualizar(){
         $query = "UPDATE Seguro  SET Codigo_Equipo  = '$this->codigo_equipo', Fecha_Vencido = '$this->fecha_vencido', Costo_Seguro = '$this->costo_seguro'
             WHERE Id_Seguro = '$this->id_seguro'";
-        $resultado = mysqli_query ($conexión,$query );
+        $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){
