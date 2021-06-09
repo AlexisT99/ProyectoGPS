@@ -1,10 +1,12 @@
 <?php 
 
-	$conexion=mysqli_connect('localhost','root','','gps');
+	$conexion=mysqli_connect('localhost','root','','inventario');
 
  ?>
  <?php
-$codigo = $_POST['codigo'];
+    include("/InterfazInventario_Equipo/index.php");
+
+$codigo = $_POST['txtBuscar'];
 $sql="SELECT * FROM materiales WHERE Id_Material = '$codigo'";
 $result=mysqli_query($conexion,$sql);
 while($mostrar=mysqli_fetch_array($result)){

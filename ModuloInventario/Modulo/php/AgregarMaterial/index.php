@@ -19,8 +19,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -44,9 +44,11 @@
                         <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;"></p>
                         <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad">
                                 <optgroup label="This is a group">
-                                    <option value="12" selected="">This is item 1</option>
-                                    <option value="13">This is item 2</option>
-                                    <option value="14">This is item 3</option>
+                                    <option value="12" selected="">Kg</option>
+                                    <option value="13">g</option>
+                                    <option value="14">mg</option>
+                                    <option value="15">L</option>
+                                    <option value="16">ml</option>
                                 </optgroup>
                             </select></p>
                         <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="text" id="txtCantidad" style="width: 550px;"></p>

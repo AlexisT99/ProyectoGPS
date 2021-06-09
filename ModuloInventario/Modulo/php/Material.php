@@ -1,4 +1,5 @@
 <?php
+include("/InterfazInventario_Equipo/index.php");
 class Material{
     //atributos
     public $id_material;
@@ -7,6 +8,7 @@ class Material{
     public $unidad;
     public $descripcion;
     public $fecha_vencido;
+    public $txtBuscar;
 
     /******Constructor******/ 
     function __construct($id_material,$nombre,$cantidad,$unidad,$descripcion,$fecha_vencido){
@@ -115,6 +117,14 @@ class Material{
         
     }//fin buscar
 */
+    function buscar($id_material){
+
+        $conexion=mysqli_connect('localhost','root','','inventario');
+
+        $txtBuscar = $_POST['txtBuscar'];
+        $query="SELECT * FROM materiales WHERE ID_MATERIAL = '$txtBuscar'";
+        $result=mysqli_query($conexion,$query);
+    }
 }//fin class Material
 
 $objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");

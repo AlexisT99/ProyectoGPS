@@ -1,3 +1,12 @@
+<?php 
+	$conexion=mysqli_connect('localhost','root','','inventario');
+?>
+<?php
+    $codigo = $_POST['txtBuscar'];
+    $sql="SELECT * FROM materiales WHERE Id_Material = '$codigo'";
+    $result=mysqli_query($conexion,$sql);
+    $mostrar = mysqli_fetch_array($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +29,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -58,7 +67,17 @@
                                             <tbody>
                                                 <tr>
                                                     <td id="lblCodigo">Código</td>
-                                                    <td><input type="text" id="txtCodigo"></td>
+                                                    
+                                                    <td>
+                                                        <?php 
+                                                            if(isset($_POST["txtCodigo"])) {
+                                                                echo '<input type="text" id="txtCodigo" value="'.$_POST["Codigo_Equipo"].'">';
+                                                            }else{
+                                                                echo '<input type="text" id="txtCodigo" value="">';
+                                                            }
+                                                        ?>
+                                                        
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblCaracteristicas">Características</td>

@@ -1,7 +1,7 @@
 <?php
-include('Seguro.php');
-include('Mantenimiento.php');
-include('Equipo.php');
+require 'Seguro.php';
+require 'Mantenimiento.php';
+require 'Equipo.php';
 
 
     //variables
@@ -16,7 +16,14 @@ include('Equipo.php');
     $mantenimiento = new Mantenimiento($_POST['txtProveedor'],$_POST['txtFechaPM'],$_POST['cmbEstado']
     ,$_POST['txtObservaciones'],$_POST['txtTipoServicio'],$_POST['txtCodigo']);
 
-    $equipo->insertar();
+    /*Condiciones para agregar a mantenimiento o a seguro */
+    if(($mantenimiento->getProveedor())==""){
+        if(($seguro->getIdSeguro())==""){
+            $equipo->insertar();
+        }
+        
+    }
+    
 
 
 
