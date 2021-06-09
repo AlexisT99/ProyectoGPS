@@ -100,9 +100,9 @@ class Mantenimiento{
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Mantenimiento
-
+/*
 $objeto1 = new Mantenimiento("12AB","Pepe","2021-06-08","Soltero","Ninguna","A","1234A");
 
-$objeto1->insertar();
+$objeto1->insertar();*/
 
 ?>

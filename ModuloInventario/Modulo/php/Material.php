@@ -94,7 +94,7 @@ class Material{
     }//fin insertar
 
     function actualizar(){
-        
+        $conexion = mysqli_connect("localhost","root","","inventario");
         $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material', NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
                   CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->descripcion' WHERE ID_MATERIAL = '$this->id_material'";
         //Realizar Actualizacion 
@@ -105,7 +105,8 @@ class Material{
     }//fin actualizar
 
     function disminuir(){
-        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE Id_Material = '$this->id_material and CANTIDAD_MATERIAL > 0'";
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
 /*
@@ -117,5 +118,5 @@ class Material{
 }//fin class Material
 
 $objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");
-$objeto1->insertar();
+$objeto1->disminuir();
 ?>

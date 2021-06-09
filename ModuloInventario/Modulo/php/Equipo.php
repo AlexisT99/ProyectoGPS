@@ -98,8 +98,8 @@ class Equipo{
     }//fin elimininar
     
 }//fin class Equipo
-
+/*
 $objeto1 = new Equipo("1234A","Equipo de pepito","Alto y moreno","Nissan","2014","No");
 $objeto1->setDescripcion("Aun que no");
-$objeto1->actualizar();
+$objeto1->actualizar();*/
 ?>

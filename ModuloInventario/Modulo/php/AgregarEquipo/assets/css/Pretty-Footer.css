@@ -341,3 +341,16 @@ div.social-links {
   border-radius: 40px;
 }
 
+#btnGuarda {
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #18A0FB;
+  border: 1px solid #18A0FB;
+}
+
+#btnLimpiar {
+  font-weight: bold;
+  background: #17164D;
+  color: white;
+}
+

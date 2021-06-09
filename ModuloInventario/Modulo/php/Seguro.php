@@ -71,6 +71,7 @@ class Seguro{
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Seguro
+/*
 $objeto1 = new Seguro("1","1234A","2021/06/09","13");
-$objeto1->insertar();
+$objeto1->insertar();*/
 ?>
