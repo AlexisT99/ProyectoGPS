@@ -139,7 +139,7 @@ h1 {
 }
 
 .table.tabla-bar tbody {
-  height: 200px;
+  height: 150px;
   overflow-y: auto;
   width: 100%;
 }
@@ -167,6 +167,7 @@ h1 {
 
 main {
   display: flex;
+  flex-direction: column;
 }
 
 #lblObjeto {
