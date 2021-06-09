@@ -1,34 +1,35 @@
 <?php
+
 class Equipo{
     
     //atributos
-    public $numero_serie;
+    public $codigo_equipo;
     public $descripcion;
     public $caracteristicas;
     public $marca;
     public $modelo;
     public $tipo;
-    public $id_mant;
 
+    //varibles globales
+    $conexion;
     /******Constructor******/
-    function __construct($numero_serie,$descripcion,$caracteristicas,$marca,$modelo,$tipo,$id_mant){
-        $this->numero_serie = $numero_serie;
+    function __construct($codigo_equipo,$descripcion,$caracteristicas,$marca,$modelo,$tipo){
+        $this->codigo_equipo = $codigo_equipo;
         $this->descripcion = $descripcion;
         $this->caracteristicas = $caracteristicas;
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->tipo = $tipo;
-        $this->id_mant = $id_mant;
     }//fin del constructor
 
 /************************Metodos get & set**********************/
     
     function getNumeroSerie(){
-        return $this->numero_serie;
+        return $this->codigo_equipo;
     }//fin getNumeroSerie
 
-    function setNumeroSerie($numero_serie){
-        $this->numero_serie = $numero_serie;
+    function setNumeroSerie($codigo_equipo){
+        $this->codigo_equipo = $codigo_equipo;
     }//fin setNumeroSerie
 
    
@@ -75,15 +76,23 @@ class Equipo{
     function setTpo($tipo){
         $this->tipo = $tipo;
     }//fin setTipo
+/*********************************METODOS MYSQL************************************************************/
+    function insertar(){
+        //insserar a la base de datos un equipo
+        $query = "INSERT INTO Equipo VALUES('$this->codigo_equipo','$this->descripcion',$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
+        $resultado = mysqli_query ($conexión,$query );
+    }//fin insertar
 
+    function actualizar(){
+        $query = "UPDATE Equipo  SET Caracteristicas  = '$this->caracteristicas', Marca = '$this->marca', Modelo = '$this->modelo ', Tipo = '$this->tipo'
+           ,Descripcion = '$this->descripcion' WHERE Codigo_Equipo = '$this->codigo_Equipo'";
+           $resultado = mysqli_query ($conexión,$query );
+    }//fin actualizar
 
-    function getIdMant(){
-        return $this->id_mant;
-    }//fin getId_Mant
-
-    function setIdMant($id_mant){
-        $this->id_mant = $id_mant;
-    }//fin setId_Mant
-
+    function eliminar(){
+        $query  = "DELETE FROM  Equipo WHERE Codigo_Equipo = $this->codigo_equipo";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin elimininar
+    
 }//fin class Equipo
 ?>
