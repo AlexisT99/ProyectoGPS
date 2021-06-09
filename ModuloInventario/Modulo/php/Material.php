@@ -74,5 +74,39 @@ class Material{
         $this->fecha_vencido = $fecha_vencido;
     }//fin setFechaVencido
 
+/*************************** METODOS MYSQL *********************************************************************/
+    function insertar(){
+        if(buscar()){
+            //consulta para insertar 
+            $query= "INSERT INTO Material (Id_Material,Nombre,Unidad,Cantidad,Descripcion,Fecha_Vencido)
+            VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
+            //Realizar Insert
+            $resultado = mysqli_query($conexion,$query);
+        }else{
+            $query = "UPDATE Material SET Cantidad = Cantidad + 1 WHERE Id_Material = '$this->id_material and Cantidad > 0'"
+            $resultado = mysqli($conexion,$query);
+        }//fin else
+        mysqli_close($conexion);
+    }//fin insertar
+
+    function actualizar(){
+        $query = "UPDATE  Material SET Id_Material = '$this->id_material, Nombre = '$this->nombre', Unidad ='$this->unidad',
+                  Cantidad = '$this->cantidad',Descripcion = '$this->fecha_vencido' WHERE Id_Material = '$this->id_material'";
+        //Realizar Actualizacion 
+        $resultado = mysqli_query ($conexion,$query);
+        if (!$resultado){ echo 'Error al momdificar';} 
+        else {echo 'Equipo actualizado';}
+        mysqli_close($conexion);
+    }//fin actualizar
+
+    function disminuir(){
+        $query = "UPDATE Material SET Cantidad = Cantidad-1 WHERE Id_Material = '$this->id_material and Cantidad > 0'"
+        $resultado = mysqli($conexion,$query);
+    }//fin disminuir
+
+    function boolean buscar(){
+        $query = "SELECT * FROM Material WHERE Id_Material = '$this->id_material'"
+        return mysqli($conexion,$query);
+    }//fin buscar
 }//fin class Material
 ?>
