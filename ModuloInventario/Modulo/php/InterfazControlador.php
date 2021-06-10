@@ -22,16 +22,13 @@ $equipo = new Equipo( $_POST["txtCodigo"],
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['eliminar'])){
   $equipo->eliminar();
   header("Location: index.php");
-}
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['limpiar'])){
-    header("Location: index.php");
-  }	
-  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['modificar'])){
+}	
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['modificar'])){
     $equipo->actualizar();
-  }	
-  if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['agregar'])){
+}	
+if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['agregar'])){
     $equipo->insertar();
-  }	
+}	
 
 
 
