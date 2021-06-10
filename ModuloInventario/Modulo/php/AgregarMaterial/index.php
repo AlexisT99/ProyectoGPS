@@ -19,8 +19,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -40,24 +40,25 @@
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
                     <form>
                         <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Material</h1>
-                        <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad">
+                        <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;" name="txtIdMantenimiento"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;" name="txtNombre"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                 <optgroup label="This is a group">
                                     <option value="12" selected="">Kg</option>
-                                    <option value="13">g</option>
-                                    <option value="14">mg</option>
-                                    <option value="15">L</option>
-                                    <option value="16">ml</option>
+                                    <option value="13">T</option>
+                                    <option value="14">g</option>
+                                    <option value="15">mg</option>
+                                    <option value="16">L</option>
+                                    <option value="17">ml</option>
                                 </optgroup>
                             </select></p>
-                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="text" id="txtCantidad" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="text" id="txtCantidad" style="width: 550px;" name="txtCantidad"></p>
                         <p style="padding-bottom: 0px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 85px;">Descripción:</label><textarea class="form-control" id="txtDescripcion"></textarea></p>
-                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 85px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
+                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
                         <p style="padding-bottom: 0px;"></p>
                         <p style="padding-bottom: 0px;"></p>
-                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" value="Guardar"><input class="form-control-file" type="submit" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><input class="form-control-file" type="submit" id="btnCambio" value="<"></p>
+                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><a id="btnCambio" href="#">&lt;</a></p>
                     </form>
                 </div>
                 <footer>

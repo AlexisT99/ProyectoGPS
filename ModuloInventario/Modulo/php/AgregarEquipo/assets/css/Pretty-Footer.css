@@ -367,3 +367,15 @@ div.social-links {
   color: #764119;
 }
 
+#txtCambio {
+  color: #18A0FB;
+  font-size: 1.5rem;
+  border: 1px solid #18A0FB;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 200px;
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+

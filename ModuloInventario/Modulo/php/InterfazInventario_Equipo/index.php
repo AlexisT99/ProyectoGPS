@@ -16,7 +16,6 @@
 </head>
 
 <body>
-<form name="" action="../InterfazControlador.php" method="post"> 
     <div id="wrapper">
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
@@ -43,9 +42,7 @@
                     <main>
                         <div style="display: flex;">
                             <div id="ventanaDerecha">
-                                <div><input type="submit" id="btnMaterial" value="Material" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEquipo" value="Equipo" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;">
-                                    <div class="btn-toolbar"></div>
-                                </div>
+                                <div style="padding-bottom: 30px;"><a id="btnMaterial" href="#" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="#" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Equipo</a></div>
                                 <div>
                                     <div class="table-responsive" id="tblObjeto">
                                         <table class="table">
@@ -54,15 +51,14 @@
                                                     <th id="lblObjeto">Objeto de inventario</th>
                                                 </tr>
                                             </thead>
-                                           
                                             <tbody>
                                                 <tr>
                                                     <td id="lblCodigo">Código</td>
-                                                    <td><input type="text" id="txtCodigo" name="txtCodigo" ></td>
+                                                    <td><input type="text" id="txtCodigo" name="txtCodigo"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblCaracteristicas">Características</td>
-                                                    <td><input type="text" id="txtCaracteristicas" name="txtCaracteristicas" ></td>
+                                                    <td><input type="text" id="txtCaracteristicas" name="txtCaracteristicas"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblMarca">Marca</td>
@@ -70,19 +66,29 @@
                                                 </tr>
                                                 <tr>
                                                     <td id="lblModelo">Modelo</td>
-                                                    <td><input type="text" id="txtModelo" name= "txtModelo" ></td>
+                                                    <td><input type="text" id="txtModelo" name="txtModelo"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblTipo">Tipo</td>
-                                                    <td><input type="text" id="txtTipo" name="txtTipo"></td>
+                                                    <td><select id="cmbTipo" name="cmbTipo">
+                                                            <optgroup label="This is a group">
+                                                                <option value="12" selected="">Auto</option>
+                                                                <option value="13">No Auto</option>
+                                                            </optgroup>
+                                                        </select></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblEstado">Estado</td>
-                                                    <td><input type="text" id="txtEstado"></td>
+                                                    <td><select id="cmbEstado" name="cmbEstado">
+                                                            <optgroup label="This is a group">
+                                                                <option value="12" selected="">Bueno</option>
+                                                                <option value="13">Malo</option>
+                                                            </optgroup>
+                                                        </select></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblDescripcion">Descripción</td>
-                                                    <td><textarea id="txtDescripcion"  name="txtDescripcion"></textarea></td>
+                                                    <td><textarea id="txtDescripcion" name="txtDescripcion"></textarea></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -94,7 +100,7 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"></div>
+                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></div>
                                             <h2 class="text-center">EQUIPO</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
@@ -112,12 +118,7 @@
                                                     <tbody></tbody>
                                                 </table>
                                             </div>
-                                            <div>
-                                            <input type="submit" id="btnLimpiar" value="Limpiar" name="limpiar"style="font-weight: bold;background: white;margin: 10px;width: inherit;">
-                                            <input type="submit" id="btnEliminar"name = "eliminar"style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Eliminar">
-                                            <input type="submit" id="btnModificar" name="modificar"  value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;">
-                                            <input type="submit" id="btnAgregar" name ="agregar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Agregar">
-                                            </div>
+                                            <div><input type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="#" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </div>
                                 </section>
@@ -172,7 +173,6 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
-</form>
 </body>
 
 </html>

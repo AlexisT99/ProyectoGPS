@@ -90,6 +90,7 @@
 #btnBuscar {
   box-sizing: border-box;
   border-radius: 8px;
+  padding: 7px;
   color: #18A0FB;
   border: 1px solid #18A0FB;
 }
@@ -107,8 +108,13 @@
 }
 
 #btnEquipo {
-  border: 2px solid white;
+  font-weight: bold;
+  background: #17164D;
   border-radius: 8px;
+  margin: 10px;
+  width: inherit;
+  color: white;
+  padding: 7px;
 }
 
 #btnAtras {
@@ -278,5 +284,11 @@ main {
 
 #lblIdMaterial {
   color: WHITE;
+}
+
+#cmbUnidad {
+  width: 150px;
+  background: #B6CCD9;
+  border-radius: 40px;
 }
 

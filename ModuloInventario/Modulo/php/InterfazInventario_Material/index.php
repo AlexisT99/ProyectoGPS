@@ -42,7 +42,7 @@
                     <main>
                         <div style="display: flex;">
                             <div id="ventanaDerecha">
-                                <div><input type="submit" id="btnMaterial" value="Materia" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEquipo" value="Equipo" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"></div>
+                                <div style="padding-bottom: 30px;"><a id="btnMaterial" href="#" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="#">Equipo</a></div>
                                 <div>
                                     <div class="table-responsive" id="tblObjeto">
                                         <table class="table">
@@ -54,27 +54,36 @@
                                             <tbody>
                                                 <tr>
                                                     <td id="lblIdMaterial">IdMaterial</td>
-                                                    <td><input type="text" id="txtIdMaterial"></td>
+                                                    <td><input type="text" id="txtIdMaterial" name="txtIdMaterial"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblNombre">Nombre</td>
-                                                    <td><input type="text" id="txtNombre"></td>
+                                                    <td><input type="text" id="txtNombre" name="txtNombre"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblCantidad">Cantidad</td>
-                                                    <td><input type="text" id="txtCantidad"></td>
+                                                    <td><input type="text" id="txtCantidad" name="txtCantidad"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblUnidad">Unidad</td>
-                                                    <td><input type="text" id="txtUnidad"></td>
+                                                    <td><select id="cmbUnidad" name="cmbUnidad">
+                                                            <optgroup label="This is a group">
+                                                                <option value="12" selected="">Kg</option>
+                                                                <option value="13">T</option>
+                                                                <option value="14">g</option>
+                                                                <option value="15">mg</option>
+                                                                <option value="16">L</option>
+                                                                <option value="17">ml</option>
+                                                            </optgroup>
+                                                        </select></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblFechaVencimiento">Fecha Vencimiento</td>
-                                                    <td><input type="text" id="txtFechaVencimiento"></td>
+                                                    <td><input type="text" id="txtFechaVencimiento" name="txtFechaVencimiento"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblDescripcion">Descripción</td>
-                                                    <td><textarea id="txtDescripcion"></textarea></td>
+                                                    <td><textarea id="txtDescripcion" name="txtDescripcion"></textarea></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -103,7 +112,7 @@
                                                     <tbody></tbody>
                                                 </table>
                                             </div>
-                                            <div><input type="submit" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEliminar" value="Eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnAgregar" value="Agregar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;"></div>
+                                            <div><input type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" value="Eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="#" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </div>
                                 </section>

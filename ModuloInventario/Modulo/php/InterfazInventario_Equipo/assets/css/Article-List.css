@@ -216,3 +216,15 @@ main {
   border: 1px solid #18A0FB;
 }
 
+#cmbTipo {
+  width: 150px;
+  background: #B6CCD9;
+  border-radius: 40px;
+}
+
+#cmbEstado {
+  width: 150px;
+  background: #B6CCD9;
+  border-radius: 40px;
+}
+
