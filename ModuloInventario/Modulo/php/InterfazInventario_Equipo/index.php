@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<form name="" action="../InterfazControlador.php" method="post"> 
     <div id="wrapper">
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
@@ -53,26 +54,27 @@
                                                     <th id="lblObjeto">Objeto de inventario</th>
                                                 </tr>
                                             </thead>
+                                           
                                             <tbody>
                                                 <tr>
                                                     <td id="lblCodigo">Código</td>
-                                                    <td><input type="text" id="txtCodigo"></td>
+                                                    <td><input type="text" id="txtCodigo" name="txtCodigo" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblCaracteristicas">Características</td>
-                                                    <td><input type="text" id="txtCaracteristicas"></td>
+                                                    <td><input type="text" id="txtCaracteristicas" name="txtCaracteristicas" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblMarca">Marca</td>
-                                                    <td><input type="text" id="txtMarca"></td>
+                                                    <td><input type="text" id="txtMarca" name="txtMarca"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblModelo">Modelo</td>
-                                                    <td><input type="text" id="txtModelo"></td>
+                                                    <td><input type="text" id="txtModelo" name= "txtModelo" ></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblTipo">Tipo</td>
-                                                    <td><input type="text" id="txtTipo"></td>
+                                                    <td><input type="text" id="txtTipo" name="txtTipo"></td>
                                                 </tr>
                                                 <tr>
                                                     <td id="lblEstado">Estado</td>
@@ -80,7 +82,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td id="lblDescripcion">Descripción</td>
-                                                    <td><textarea id="txtDescripcion"></textarea></td>
+                                                    <td><textarea id="txtDescripcion"  name="txtDescripcion"></textarea></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -110,7 +112,12 @@
                                                     <tbody></tbody>
                                                 </table>
                                             </div>
-                                            <div><input type="submit" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Eliminar"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"><input type="submit" id="btnAgregar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Agregar"></div>
+                                            <div>
+                                            <input type="submit" id="btnLimpiar" value="Limpiar" name="limpiar"style="font-weight: bold;background: white;margin: 10px;width: inherit;">
+                                            <input type="submit" id="btnEliminar"name = "eliminar"style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Eliminar">
+                                            <input type="submit" id="btnModificar" name="modificar"  value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;">
+                                            <input type="submit" id="btnAgregar" name ="agregar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;" value="Agregar">
+                                            </div>
                                         </div>
                                     </div>
                                 </section>
@@ -165,6 +172,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
+</form>
 </body>
 
 </html>
