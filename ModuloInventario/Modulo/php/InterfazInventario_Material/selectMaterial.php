@@ -1,7 +1,7 @@
 <?php
 $conexion = mysqli_connect("localhost","root","","inventario");
 if($conexion){
-    $consulta = "select * from Materiales";
+    $consulta = "select * from MATERIAL";
     $datos = $conexion->query($consulta);
         if($datos->num_rows>0){
             while($fila=$datos->fetch_assoc()){

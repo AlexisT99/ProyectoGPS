@@ -43,7 +43,8 @@
                         <form action = "../InterfazControladorMateriales.php" method = "POST">
                             <div style="display: flex;">
                                 <div id="ventanaDerecha">
-                                    <div style="padding-bottom: 30px;"><a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
+                                    <div style="padding-bottom: 30px;">
+                                    <a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
                                     <div>
                                         <div class="table-responsive" id="tblObjeto">
                                             <table class="table">
@@ -135,7 +136,11 @@
                                             <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
                                         </tr>
                                     </thead>
-                                    <tbody></tbody>
+                                    <tbody>
+                                    <?php
+                                        require_once "../InterfazInventario_Equipo/selectTabla.php";
+                                    ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

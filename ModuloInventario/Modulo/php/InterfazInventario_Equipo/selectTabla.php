@@ -2,7 +2,7 @@
 $conexion = mysqli_connect("localhost","root","","inventario");
 if($conexion){
     $consulta = "select E.CODIGO_EQUIPO,M.Estado,S.Fecha_Vencido from Equipo E 
-    INNER JOIN Mantenimiento M ON E.id_Mantenimiento = M.id_Mantenimiento
+    INNER JOIN Mantenimiento M ON E.CODIGO_EQUIPO = M.CODIGO_EQUIPO
     INNER JOIN Seguro S ON E.CODIGO_EQUIPO = S.CODIGO_EQUIPO";
     $datos = $conexion->query($consulta);
         if($datos->num_rows>0){

@@ -73,9 +73,8 @@
                                                         <td id="lblTipo">Tipo</td>
                                                         <td><select class="form-control" id="cmbTipo" name="cmbTipo">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="12" selected="">This is item 1</option>
-                                                                    <option value="13">This is item 2</option>
-                                                                    <option value="14">This is item 3</option>
+                                                                    <option value="12" selected="">Auto</option>
+                                                                    <option value="13">No Auto</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
@@ -83,9 +82,8 @@
                                                         <td id="lblEstado">Estado</td>
                                                         <td><select class="form-control" id="cmbEstado" name="cmbEstado">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="12" selected="">This is item 1</option>
-                                                                    <option value="13">This is item 2</option>
-                                                                    <option value="14">This is item 3</option>
+                                                                    <option value="12" selected="">Bueno</option>
+                                                                    <option value="13">Malo</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
@@ -129,6 +127,7 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </section>
                                 </div>
