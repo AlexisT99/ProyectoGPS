@@ -40,108 +40,109 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
                     <main>
-                        <div style="display: flex;">
-                            <div id="ventanaDerecha">
-                                <div style="padding-bottom: 30px;"><a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Equipo</a></div>
-                                <div>
-                                    <div class="table-responsive" id="tblObjeto">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th id="lblObjeto">Objeto de inventario</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td id="lblCodigo">Código</td>
-                                                    <td><input type="text" id="txtCodigo" name="txtCodigo"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblCaracteristicas">Características</td>
-                                                    <td><input type="text" id="txtCaracteristicas" name="txtCaracteristicas"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblMarca">Marca</td>
-                                                    <td><input type="text" id="txtMarca" name="txtMarca"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblModelo">Modelo</td>
-                                                    <td><input type="text" id="txtModelo" name="txtModelo"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblTipo">Tipo</td>
-                                                    <td><select id="cmbTipo" name="cmbTipo">
-                                                            <optgroup label="This is a group">
-                                                                <option value="12" selected="">Auto</option>
-                                                                <option value="13">No Auto</option>
-                                                            </optgroup>
-                                                        </select></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblEstado">Estado</td>
-                                                    <td><select id="cmbEstado" name="cmbEstado">
-                                                            <optgroup label="This is a group">
-                                                                <option value="12" selected="">Bueno</option>
-                                                                <option value="13">Malo</option>
-                                                            </optgroup>
-                                                        </select></td>
-                                                </tr>
-                                                <tr>
-                                                    <td id="lblDescripcion">Descripción</td>
-                                                    <td><textarea id="txtDescripcion" name="txtDescripcion"></textarea></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                        <form action = "../InterfazControlador.php" method = "POST">
+                            <div style="display: flex;">
+                                <div id="ventanaDerecha">
+                                    <div style="padding-bottom: 30px;"><a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Equipo</a></div>
+                                    <div>
+                                        <div class="table-responsive" id="tblObjeto">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th id="lblObjeto">Objeto de inventario</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="lblCodigo">Código</td>
+                                                        <td><input class="form-control" type="text" id="txtCodigo" name="txtCodigo"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblCaracteristicas">Características</td>
+                                                        <td><input class="form-control" type="text" id="txtCaracteristicas" name="txtCaracteristicas"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblMarca">Marca</td>
+                                                        <td><input class="form-control" type="text" id="txtMarca" name="txtMarca"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblModelo">Modelo</td>
+                                                        <td><input class="form-control" type="text" id="txtModelo" name="txtModelo"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblTipo">Tipo</td>
+                                                        <td><select class="form-control" id="cmbTipo" name="cmbTipo">
+                                                                <optgroup label="This is a group">
+                                                                    <option value="12" selected="">This is item 1</option>
+                                                                    <option value="13">This is item 2</option>
+                                                                    <option value="14">This is item 3</option>
+                                                                </optgroup>
+                                                            </select></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblEstado">Estado</td>
+                                                        <td><select class="form-control" id="cmbEstado" name="cmbEstado">
+                                                                <optgroup label="This is a group">
+                                                                    <option value="12" selected="">This is item 1</option>
+                                                                    <option value="13">This is item 2</option>
+                                                                    <option value="14">This is item 3</option>
+                                                                </optgroup>
+                                                            </select></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblDescripcion">Descripción</td>
+                                                        <td><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <section class="article-list">
+                                        <div class="container">
+                                            <div class="intro">
+                                                <div style="display: flex;"><input class="form-control" type="text" id="txtBuscar" style="margin-top: 10px;"><input class="form-control-file" type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></div>
+                                                <h2 class="text-center">EQUIPO</h2>
+                                                <div class="table-responsive" id="tblEquipo">
+                                                    <table class="table tabla-bar">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="&quot;col&quot;" style="width: 100px">Código</th>
+                                                                <th scope="&quot;col&quot;" style="width: 130px">Características</th>
+                                                                <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
+                                                                <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
+                                                                <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
+                                                                <th scope="&quot;col&quot;" style="width: 70px">Estado</th>
+                                                                <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                                <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                                            </div>
+                                        </div>
+                                    </section>
                                 </div>
                             </div>
                             <div>
-                                <div></div>
-                                <section class="article-list">
-                                    <div class="container">
-                                        <div class="intro">
-                                            <div>
-                                            <input type="text" id="txtBuscar">
-                                            <input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
-                                            </div>
-                                            <h2 class="text-center">EQUIPO</h2>
-                                            <div class="table-responsive" id="tblEquipo">
-                                                <table class="table tabla-bar">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="&quot;col&quot;" style="width: 100px">Código</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Características</th>
-                                                            <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
-                                                            <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
-                                                            <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
-                                                            <th scope="&quot;col&quot;" style="width: 70px">Estado</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody></tbody>
-                                                </table>
-                                            </div>
-                                            <div><input type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <h2 class="text-center">Recordatorio</h2>
+                                <div class="table-responsive" id="tblEquipo-1">
+                                    <table class="table tabla-bar">
+                                        <thead>
+                                            <tr>
+                                                <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
+                                                <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
+                                                <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <h2 class="text-center">Recordatorio</h2>
-                            <div class="table-responsive" id="tblEquipo-1">
-                                <table class="table tabla-bar">
-                                    <thead>
-                                        <tr>
-                                            <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
-                                            <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
-                                            <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                            </div>
-                        </div>
+                        </form>
                     </main>
                 </div>
                 <footer>
