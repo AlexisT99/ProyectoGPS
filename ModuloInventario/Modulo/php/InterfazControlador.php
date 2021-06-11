@@ -26,9 +26,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['eliminar'])){
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['modificar'])){
     $equipo->actualizar();
 }	
+/*
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['agregar'])){
     $equipo->insertar();
-}	
+}	*/
 
 
 

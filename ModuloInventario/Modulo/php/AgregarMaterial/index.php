@@ -58,7 +58,7 @@
                         <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
                         <p style="padding-bottom: 0px;"></p>
                         <p style="padding-bottom: 0px;"></p>
-                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><a id="btnCambio" href="../AgregarEquipo/index.php">&lt;</a></p>
+                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" name = "btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><a id="btnCambio" href="../AgregarEquipo/index.php">&lt;</a></p>
                     </form>
                 </div>
                 <footer>

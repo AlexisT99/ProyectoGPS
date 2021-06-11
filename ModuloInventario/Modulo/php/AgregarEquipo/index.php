@@ -60,7 +60,7 @@
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
-                            <div><input class="form-control-file" type="submit" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;" value="Agregar"><input class="form-control-file" type="reset" id="btnLimpiar" style="font-weight: bold;background: #17164D;margin-left: 12px;border-radius: 10px;" value="Limpiar"><a id="txtCambio" href="../AgregarMaterial/index.php" name="txtCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>
+                            <div><input class="form-control-file" type="submit" id="btnGuardar" name = "btnGuardar" style="font-weight: bold;background: white;margin: 13px;" value="Agregar"><input class="form-control-file" type="reset" id="btnLimpiar" style="font-weight: bold;background: #17164D;margin-left: 12px;border-radius: 10px;" value="Limpiar"><a id="txtCambio" href="../AgregarMaterial/index.php" name="txtCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>
                         </div>
                         <div style="margin-left: 20px;">
                             <div style="padding-left: 30px;height: 600px;border: 3px solid #764119;padding: 20px;width: 500px;">
