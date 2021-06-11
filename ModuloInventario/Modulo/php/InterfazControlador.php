@@ -18,17 +18,22 @@ $equipo = new Equipo( $_POST["txtCodigo"],
                      $_POST["txtMarca"],
                      $_POST["txtModelo"],
                      $_POST["txtTipo"]);
+                     
+
+$mantenimiento = new Mantenimiento("","","","","",$_POST["txtCodigo"]);
+
+$seguro = new Seguro("",$_POST["txtCodigo"],"","");
 
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['eliminar'])){
+  $mantenimiento->eliminar();
+  $seguro->eliminar();
   $equipo->eliminar();
   header("Location: index.php");
 }	
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['modificar'])){
     $equipo->actualizar();
 }	
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['agregar'])){
-    $equipo->insertar();
-}	
+
 
 
 

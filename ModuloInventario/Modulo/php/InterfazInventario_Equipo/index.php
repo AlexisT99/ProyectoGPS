@@ -100,7 +100,10 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></div>
+                                            <div>
+                                            <input type="text" id="txtBuscar">
+                                            <input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                            </div>
                                             <h2 class="text-center">EQUIPO</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
