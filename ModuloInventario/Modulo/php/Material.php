@@ -1,5 +1,5 @@
 <?php
-
+include("/InterfazInventario_Equipo/index.php");
 class Material{
     //atributos
     public $id_material;
@@ -82,7 +82,7 @@ class Material{
         $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
         $HOLA = mysqli_query($conexion,$query);
         
-        if($HOLA!=false){
+        if(!$HOLA){
             //consulta para insertar 
             $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
@@ -98,7 +98,7 @@ class Material{
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","","inventario");
         $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material', NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
-                  CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->descripcion' WHERE ID_MATERIAL = '$this->id_material'";
+                  CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->descripcion',FECHA_VENCIDO = '$this->fecha_vencido'  WHERE ID_MATERIAL = '$this->id_material'";
         //Realizar Actualizacion 
         $resultado = mysqli_query ($conexion,$query);
         if (!$resultado){ echo 'Error al modificar';} 
@@ -127,6 +127,6 @@ class Material{
     }
 }//fin class Material
 
-$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");
-$objeto1->insertar();
+//$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");
+//$objeto1->disminuir();
 ?>

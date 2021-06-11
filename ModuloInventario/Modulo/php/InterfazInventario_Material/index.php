@@ -40,7 +40,7 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
                     <main>
-                        <form action = "../InterfazControlador.php" method = "POST">
+                        <form action = "../InterfazControladorMateriales.php" method = "POST">
                             <div style="display: flex;">
                                 <div id="ventanaDerecha">
                                     <div style="padding-bottom: 30px;"><a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
@@ -115,6 +115,7 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+                                            <div><input type="reset" id="btnLimpiar" value="Limpiar" name="limpiar"  style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" value="Eliminar"  name="eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;"><input type="submit" id="btnModificar" value="Modificar"  name="modificar"style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </section>
                                 </div>
