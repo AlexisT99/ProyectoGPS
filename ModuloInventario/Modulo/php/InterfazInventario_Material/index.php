@@ -69,9 +69,12 @@
                                                         <td id="lblUnidad">Unidad</td>
                                                         <td><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="12" selected="">This is item 1</option>
-                                                                    <option value="13">This is item 2</option>
-                                                                    <option value="14">This is item 3</option>
+                                                                    <option value="12" selected="">Kg</option>
+                                                                    <option value="13">T</option>
+                                                                    <option value="14">g</option>
+                                                                    <option value="15">mg</option>
+                                                                    <option value="16">L</option>
+                                                                    <option value="17">ml</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
@@ -114,8 +117,8 @@
                                                         ?>
                                                     </tbody>
                                                 </table>
-                                            </div>
-                                            <div><input type="reset" id="btnLimpiar" value="Limpiar" name="limpiar"  style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" value="Eliminar"  name="eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;"><input type="submit" id="btnModificar" value="Modificar"  name="modificar"style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                                            </div> 
+                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </section>
                                 </div>
