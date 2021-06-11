@@ -38,7 +38,7 @@
             </div>
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
-                    <form>
+                    <form action = "../InterfazAgregarM.php" method = "POST">
                         <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Material</h1>
                         <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;" name="txtIdMantenimiento"></p>
                         <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;" name="txtNombre"></p>

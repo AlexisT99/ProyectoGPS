@@ -9,7 +9,7 @@
                      $_POST["txtCaracteristicas"],
                      $_POST["txtMarca"],
                      $_POST["txtModelo"],
-                     $_POST["txtTipo"]);
+                     $_POST["cmbTipo"]);
     $mantenimiento = new Mantenimiento($_POST["txtProveedor"],
                      $_POST["txtFechaPM"],
                      $_POST["cmbEstado"],
@@ -22,9 +22,22 @@
                      $_POST["txtCostoS"]);
 
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar'])){
-        $equipo->insertar();
-        $mantenimiento->insertar();
-        $seguro->insertar()
+        if(($equipo->getCodigoEquipo())!=""){
+            $equipo->insertar();
+        }
+        if(($mantenimiento->getProveedor())!=""){
+            if(($mantenimiento->getFechaProximaM())!=""){
+                $mantenimiento->insertar();
+            }
+        }
+        if(($seguro->getIdSeguro())!=""){
+            if(($seguro->getFechaVencido())!=""){
+                if(($seguro->getCostoSeguro())!=""){
+                    $seguro->insertar()
+                }
+            }
+        }
+        
         header("Location: index.php");
     }
 ?>
