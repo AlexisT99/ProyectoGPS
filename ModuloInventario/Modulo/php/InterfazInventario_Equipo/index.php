@@ -98,49 +98,59 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div></div>
-                                    <section class="article-list">
-                                        <div class="container">
-                                            <div class="intro">
-                                                <div style="display: flex;"><input class="form-control" type="text" id="txtBuscar" style="margin-top: 10px;"><input class="form-control-file" type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></div>
-                                                <h2 class="text-center">EQUIPO</h2>
-                                                <div class="table-responsive" id="tblEquipo">
-                                                    <table class="table tabla-bar">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="&quot;col&quot;" style="width: 100px">Código</th>
-                                                                <th scope="&quot;col&quot;" style="width: 130px">Características</th>
-                                                                <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
-                                                                <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
-                                                                <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
-                                                                <th scope="&quot;col&quot;" style="width: 70px">Estado</th>
-                                                                <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody></tbody>
-                                                    </table>
-                                                </div>
-                                                <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <section class="article-list">
+                                    <div class="container">
+                                        <div class="intro">
+                                            <div>
+                                            <input type="text" id="txtBuscar">
+                                            <input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                            </div>
+                                            <h2 class="text-center">EQUIPO</h2>
+                                            <div class="table-responsive" id="tblEquipo">
+                                                <table class="table tabla-bar">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">Código</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Características</th>
+                                                            <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
+                                                            <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 70px">Estado</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        require_once "selectEquipo.php";
+                                                        ?>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </section>
                                 </div>
                             </div>
-                            <div>
-                                <h2 class="text-center">Recordatorio</h2>
-                                <div class="table-responsive" id="tblEquipo-1">
-                                    <table class="table tabla-bar">
-                                        <thead>
-                                            <tr>
-                                                <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
-                                                <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
-                                                <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
+                        </div>
+                        <div>
+                            <h2 class="text-center">Recordatorio</h2>
+                            <div class="table-responsive" id="tblEquipo-1">
+                                <table class="table tabla-bar">
+                                    <thead>
+                                        <tr>
+                                            <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                                        require_once "selectTabla.php";
+                                    ?>  
+                                    </tbody>
+                                </table>
                             </div>
                         </form>
                     </main>

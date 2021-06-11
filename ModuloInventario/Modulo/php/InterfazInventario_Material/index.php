@@ -88,29 +88,32 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div></div>
-                                    <section class="article-list">
-                                        <div class="container">
-                                            <div class="intro">
-                                                <div style="display: flex;"><input class="form-control" type="text" id="txtBuscar" name="txtBuscar"><input class="form-control-file" type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"></div>
-                                                <h2 class="text-center">MATERIAL</h2>
-                                                <div class="table-responsive" id="tblEquipo">
-                                                    <table class="table tabla-bar">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
-                                                                <th scope="&quot;col&quot;" style="width: 80px;">Nombre</th>
-                                                                <th scope="&quot;col&quot;" style="width: 90px;">Cantidad</th>
-                                                                <th scope="&quot;col&quot;" style="width: 80px">Unidad</th>
-                                                                <th scope="&quot;col&quot;" style="width: 150px;">FechaVencimiento</th>
-                                                                <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody></tbody>
-                                                    </table>
-                                                </div>
-                                                <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" value="Eliminar" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <section class="article-list">
+                                    <div class="container">
+                                        <div class="intro">
+                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"></div>
+                                            <h2 class="text-center">MATERIAL</h2>
+                                            <div class="table-responsive" id="tblEquipo">
+                                                <table class="table tabla-bar">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                                            <th scope="&quot;col&quot;" style="width: 80px;">Nombre</th>
+                                                            <th scope="&quot;col&quot;" style="width: 90px;">Cantidad</th>
+                                                            <th scope="&quot;col&quot;" style="width: 80px">Unidad</th>
+                                                            <th scope="&quot;col&quot;" style="width: 150px;">FechaVencimiento</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        require_once "selectMaterial.php";
+                                                        ?>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </section>
@@ -166,6 +169,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
+    
 </body>
 
 </html>
