@@ -67,7 +67,7 @@ class Seguro{
 
     function eliminar(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-        $query  = "DELETE FROM  Seguro WHERE ID_SEGURO = '$this->id_seguro'";
+        $query  = "DELETE FROM  Seguro WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 }//fin class Seguro

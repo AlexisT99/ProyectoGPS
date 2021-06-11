@@ -19,8 +19,8 @@
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
-                <li> <a href="#" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="#" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
+                <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
+                <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a></li>
                 <li> </li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
@@ -38,13 +38,13 @@
             </div>
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
-                    <form style="display: flex;">
+                    <form style="display: flex;" action = "../InterfazAgregarE.php" method = "POST">
                         <div>
                             <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Equipo</h1>
-                            <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" style="width: 550px;" name="txtCodigo"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input class="form-control" type="text" id="txtCaracteristicas" style="width: 550px;" name="txtCaracteristicas"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input class="form-control" type="text" id="txtMarca" style="width: 550px;" name="txtMarca"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" style="width: 550px;" namw="txtModelo"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" style="width: 400px;" name="txtCodigo"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblCaracteristicas" style="padding-right: 11px;">Caracteristicas:</label><input class="form-control" type="text" id="txtCaracteristicas" style="width: 400px;" name="txtCaracteristicas"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblMarca" style="padding-right: 100px;">Marca:</label><input class="form-control" type="text" id="txtMarca" style="width: 400px;" name="txtMarca"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" style="width: 400px;" namw="txtModelo"></p>
                             <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label><select class="form-control" id="cmbTipo" name="cmbTipo">
                                     <optgroup label="This is a group">
                                         <option value="12" selected="">Auto</option>
@@ -58,20 +58,27 @@
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
-                            <div><input class="form-control-file" type="submit" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;" value="Agregar"><input class="form-control-file" type="reset" id="btnLimpiar" style="font-weight: bold;background: #17164D;margin-left: 12px;border-radius: 10px;" value="Limpiar"><a id="txtCambio" href="#" name="txtCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>
+                            <div><input class="form-control-file" type="submit" id="btnGuardar" style="font-weight: bold;background: white;margin: 13px;" value="Agregar"><input class="form-control-file" type="reset" id="btnLimpiar" style="font-weight: bold;background: #17164D;margin-left: 12px;border-radius: 10px;" value="Limpiar"><a id="txtCambio" href="../AgregarMaterial/index.php" name="txtCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>
                         </div>
-                        <div style="padding-left: 30px;height: 550px;border: 3px solid #764119;padding: 20px;">
-                            <h1 id="lblMantenimiento" style="padding-bottom: 25px;">Mantenimiento</h1>
-                            <p style="padding-bottom: 0px;"><label id="lblProveedor" style="padding-right: 410px;">Proveedor:</label><input class="form-control" type="text" id="txtProveedor" style="width: 550px;" name="txtProveedor"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaPM" style="width: 550px;" name="txtFechaPM"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 400px;">Tipo Servicio:</label><input class="form-control" type="text" id="txtTipoServicio" style="width: 550px;" name="txtTipoServicio"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 390px;">Observaciones:</label><textarea class="form-control" id="txtObservaciones" name="txtObservaciones"></textarea></p>
-                        </div>
-                        <div style="border: 3px solid #764119;padding: 20px;height: 400px;">
-                            <h1 id="lblSeguro" style="padding-bottom: 25px;">Seguro</h1>
-                            <p style="padding-bottom: 0px;"><label id="lblSeguro2" style="padding-right: 17px;">Id Seguro:</label><input class="form-control" type="text" id="txtSeguro" style="width: 550px;" name="txtSeguro"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 17px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
-                            <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 240px;">Costo Seguro:</label><input class="form-control" type="text" id="txtCostoS" style="width: 550px;" name="txtCostoS"></p>
+                        <div style="margin-left: 20px;">
+                            <div style="padding-left: 30px;height: 600px;border: 3px solid #764119;padding: 20px;width: 500px;">
+                                <h1 id="lblMantenimiento" style="padding-bottom: 25px;">Mantenimiento</h1>
+                                <p style="padding-bottom: 0px;"><label id="lblProveedor" style="padding-right: 210px;">Proveedor:</label><input class="form-control" type="text" id="txtProveedor" style="width: 400px;" name="txtProveedor"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaPM" style="width: 400px;" name="txtFechaPM"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 200px;">Tipo Servicio:</label><select class="form-control" id="txtTipoServicio">
+                                        <optgroup label="This is a group">
+                                            <option value="12" selected="">P</option>
+                                            <option value="13">C</option>
+                                        </optgroup>
+                                    </select></p>
+                                <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 200px;">Observaciones:</label><textarea class="form-control" id="txtObservaciones" name="txtObservaciones"></textarea></p>
+                            </div>
+                            <div style="border: 3px solid #764119;padding: 20px;height: 400px;margin-top: 5px;width: 500px;">
+                                <h1 id="lblSeguro" style="padding-bottom: 25px;">Seguro</h1>
+                                <p style="padding-bottom: 0px;"><label id="lblSeguro2" style="padding-right: 17px;">Id Seguro:</label><input class="form-control" type="text" id="txtSeguro" style="width: 400px;" name="txtSeguro"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 17px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 400px;" name="txtFechaV"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 240px;">Costo Seguro:</label><input class="form-control" type="text" id="txtCostoS" style="width: 400px;" name="txtCostoS"></p>
+                            </div>
                         </div>
                     </form>
                 </div>
