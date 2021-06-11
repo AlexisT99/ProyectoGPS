@@ -115,7 +115,11 @@
                                                             <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody></tbody>
+                                                    <tbody>
+                                                        <?php
+                                                        require_once "selectEquipo.php";
+                                                        ?>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                             <div><input type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="#" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
@@ -135,7 +139,11 @@
                                             <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
                                         </tr>
                                     </thead>
-                                    <tbody></tbody>
+                                    <tbody>
+                                    <?php
+                                                        require_once "selectTabla.php";
+                                    ?>  
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
