@@ -30,7 +30,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['agregar'])){
 
 
 
-
     //($id_seguro,$codigo_equipo,$fecha_vencido,$costo_seguro)
     //$seguro = new Seguro($_POST['txtSeguro'],$_POST['txtCodigo'],$_POST['txtFechaV'],$_POST['txtCosto']);
 

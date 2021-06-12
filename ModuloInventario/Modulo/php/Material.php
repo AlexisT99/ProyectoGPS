@@ -1,21 +1,22 @@
 <?php
-include("/InterfazInventario_Equipo/index.php");
 class Material{
     //atributos
     public $id_material;
     public $nombre;
     public $cantidad;
     public $unidad;
+    public $precio;
     public $descripcion;
     public $fecha_vencido;
     public $txtBuscar;
 
     /******Constructor******/ 
-    function __construct($id_material,$nombre,$cantidad,$unidad,$descripcion,$fecha_vencido){
+    function __construct($id_material,$nombre,$cantidad,$unidad,$precio,$descripcion,$fecha_vencido){
         $this->id_material = $id_material;
         $this->nombre = $nombre;
         $this->cantidad = $cantidad;
         $this->unidad = $unidad;
+        $this->precio = $precio;
         $this->descripcion = $descripcion;
         $this->fecha_vencido = $fecha_vencido;
     }// fin Constructor
@@ -49,6 +50,14 @@ class Material{
         $this->cantidad = $cantidad;
     }//fin setCantidad
 
+    function getPrecio(){
+        return $this->precio;
+    }//fin getPrecio
+
+    function setPrecio($precio){
+        $this->precio = $precio;
+    }//fin setPrecio
+
 
     function getUnidad(){
         return $this->unidad;
@@ -79,21 +88,20 @@ class Material{
 /*************************** METODOS MYSQL *********************************************************************/
     function insertar(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-        $query = "SELECT * FROM Material WHERE ID_MATERIAL = '$this->id_material'";
-        $HOLA = mysqli_query($conexion,$query);
-        
-        if(!$HOLA){
-            //consulta para insertar 
             $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
-            //Realizar Insert
             $resultado = mysqli_query($conexion,$query);
-        }else{
-            $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL + 1 WHERE Id_Material = '$this->id_material and CANTIDAD_MATERIAL > 0'";
-            $resultado = mysqli_query($conexion,$query);
-        }//fin else
+
         mysqli_close($conexion);
     }//fin insertar
+
+    function insertarGasto(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+            $query= "INSERT INTO gastos_material(ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('$this->id_material','$this->cantidad','$this->precio')";
+            $resultado = mysqli_query($conexion,$query);
+
+        mysqli_close($conexion);
+    }//fin insertarGasto
 
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","","inventario");
@@ -111,6 +119,19 @@ class Material{
         $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
+    function aumentar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "UPDATE  material SET CANTIDAD_MATERIAL=(SELECT CANTIDAD_MATERIAL FROM material WHERE ID_MATERIAL = '$this->id_material')+ '$this->unidad' ,
+                  NOMBRE_MATERIAL=(SELECT NOMBRE_MATERIAL FROM material WHERE ID_MATERIAL='$this->id_material') , 
+                  UNIDAD_MEDIDA=(SELECT UNIDAD_MEDIDA FROM material WHERE ID_MATERIAL='$this->id_material'),
+                  DESCRIPCION=(SELECT DESCRIPCION FROM material WHERE ID_MATERIAL='$this->id_material'), 
+                  FECHA_VENCIDO=( SELECT FECHA_VENCIDO FROM material WHERE ID_MATERIAL='$this->id_material') 
+                  WHERE ID_MATERIAL= '$this->id_material'" ;
+        
+        $resultado = mysqli_query($conexion,$query);
+    }//fin disminuir
+
+
 /*
     function buscar(){
         $conexion = mysqli_connect("localhost","root","","inventario");

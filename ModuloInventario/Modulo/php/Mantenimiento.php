@@ -7,15 +7,17 @@ class Mantenimiento{
     public $estado;
     public $observaciones;
     public $tipo_servicio;
+    public $precio;
     public $codigo_equipo;
 
     /******Constructor******/
-    function __construct($proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$codigo_equipo){
+    function __construct($proveedor,$fecha_prox_m,$estado,$observaciones,$tipo_servicio,$precio,$codigo_equipo){
         $this->proveedor = $proveedor;
         $this->fecha_prox_m = $fecha_prox_m;
         $this->estado = $estado;
         $this->observaciones = $observaciones;
         $this->tipo_servicio = $tipo_servicio;
+        $this->precio=$precio;
         $this->codigo_equipo = $codigo_equipo;
     }//fin del constructor
 
@@ -60,6 +62,14 @@ class Mantenimiento{
         $this->tipo_servicio = $tipo_servicio;
     }//fin setTipoServicio
 
+    function getPrecio(){
+        return $this->precio;
+    }//fin getPrecio
+
+    function setPrecio($precio){
+        $this->precio = $precio;
+    }//fin setPrecio
+
     function getCodigoEquipo(){    
         return $this->codigo_equipo;
     }//fin getCodigoEquipo
@@ -75,6 +85,12 @@ class Mantenimiento{
             VALUES('$this->proveedor','$this->fecha_prox_m','$this->estado','$this->observaciones','$this->tipo_servicio','$this->codigo_equipo')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
+
+    function insertarGastoM(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+            $query= "INSERT INTO costomantener (ID_MANTENIMIENTO,CODIGO_EQUIPO,MONTO_MANTENER)  VALUES ((SELECT ID_MANTENIMIENTO FROM Mantenimiento WHERE PROVEEDOR ='$this->proveedor' ),'$this->codigo_equipo','$this->precio')";
+            $resultado = mysqli_query($conexion,$query);
+    }//fin insertarGastoM
 
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","","inventario");

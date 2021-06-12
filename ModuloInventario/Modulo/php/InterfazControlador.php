@@ -3,21 +3,13 @@ require 'Seguro.php';
 require 'Mantenimiento.php';
 require 'Equipo.php';
 
-//                    $codigo= $_POST["txtCodigo"];
-  //                   $des=$_POST["txtDescripcion"];
-    //                 $car=$_POST["txtCaracteristicas"];
-      //               $mar=$_POST["txtMarca"];
-        //             $mod=$_POST["txtModelo"];
-          //           $tip=$_POST["cmbTipo"];
 
-    //variables
-    //($codigo_equipo,$descripcion,$caracteristicas,$marca,$modelo,$tipo)
 $equipo = new Equipo( $_POST["txtCodigo"],
                      $_POST["txtDescripcion"],
                      $_POST["txtCaracteristicas"],
                      $_POST["txtMarca"],
                      $_POST["txtModelo"],
-                     $_POST["txtTipo"]);
+                     $_POST["cmbTipo"]);
                      
 
 $mantenimiento = new Mantenimiento("","","","","",$_POST["txtCodigo"]);
@@ -28,10 +20,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['eliminar'])){
   $mantenimiento->eliminar();
   $seguro->eliminar();
   $equipo->eliminar();
-  header("Location: index.php");
+  header("Location: InterfazInventario_Equipo/index.php");
 }	
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['modificar'])){
     $equipo->actualizar();
+    header("Location: InterfazInventario_Equipo/index.php");
 }	
 
 

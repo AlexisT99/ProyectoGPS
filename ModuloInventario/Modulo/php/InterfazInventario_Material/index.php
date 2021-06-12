@@ -40,8 +40,8 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
                     <main>
-                        <form action = "../InterfazControladorMateriales.php" method = "POST">
-                            <div style="display: flex;">
+                        <form style="display: flex;" action = "../InterfazControladorMateriales.php" method = "POST">
+                            <div >
                                 <div id="ventanaDerecha">
                                     <div style="padding-bottom: 30px;">
                                     <a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
@@ -64,7 +64,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td id="lblCantidad">Cantidad</td>
-                                                        <td><input class="form-control" type="text" id="txtCantidad" name="txtCantidad"></td>
+                                                        <td><input class="form-control" type="number" id="txtCantidad" name="txtCantidad"></td>
                                                     </tr>
                                                     <tr>
                                                         <td id="lblUnidad">Unidad</td>
@@ -98,7 +98,6 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <div><input type="text" id="txtBuscar"><input type="submit" id="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;"></div>
                                             <h2 class="text-center">MATERIAL</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
@@ -119,7 +118,7 @@
                                                     </tbody>
                                                 </table>
                                             </div> 
-                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" name ="eliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </section>
                                 </div>
@@ -128,7 +127,7 @@
                         <div>
                             <h2 class="text-center">Recordatorio</h2>
                             <div class="table-responsive" id="tblEquipo-1">
-                                <table class="table tabla-bar">
+                                <table class="table tabla-bar"  >
                                     <thead>
                                         <tr>
                                             <th scope="&quot;col&quot;" style="width: 130px;">Código</th>

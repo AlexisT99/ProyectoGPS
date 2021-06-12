@@ -13,9 +13,9 @@ if($conexion){
              
              ?>
              <tr>
-                 <td style="width : 100px"><?=$CodigoEquipo?></td>
+                 <td style="width : 150px"><?=$CodigoEquipo?></td>
                  <td style="width : 130px"><?=$Estado?></td>
-                 <td style="width : 70px"><?=$FechaV?></td>
+                 <td style="width : 150px"><?=$FechaV?></td>
                  
                  
                  

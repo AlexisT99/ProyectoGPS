@@ -57,6 +57,11 @@ class Seguro{
         $query = "INSERT INTO Seguro VALUES('$this->id_seguro','$this->codigo_equipo','$this->fecha_vencido','$this->costo_seguro')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
+    function insertarGastoS(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+            $query= "INSERT INTO gastos_seguro (ID_SEGURO,MONTO_SEGURO)  VALUES ('$this->id_seguro','$this->costo_seguro')";
+            $resultado = mysqli_query($conexion,$query);
+    }//fin insertarGasto
 
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","","inventario");

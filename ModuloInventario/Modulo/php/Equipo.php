@@ -8,17 +8,19 @@ class Equipo{
     public $caracteristicas;
     public $marca;
     public $modelo;
+    public $precio;
     public $tipo;
 
     //varibles globales
     
     /******Constructor******/
-    function __construct($codigo_equipo,$descripcion,$caracteristicas,$marca,$modelo,$tipo){
+    function __construct($codigo_equipo,$descripcion,$caracteristicas,$marca,$modelo,$precio,$tipo){
         $this->codigo_equipo = $codigo_equipo;
         $this->descripcion = $descripcion;
         $this->caracteristicas = $caracteristicas;
         $this->marca = $marca;
         $this->modelo = $modelo;
+        $this->precio = $precio;
         $this->tipo = $tipo;
     }//fin del constructor
 
@@ -68,6 +70,13 @@ class Equipo{
         $this->modelo = $modelo;
     }//fin setModelo
 
+    function getPrecio(){
+        return $this->precio;
+    }//fin getPrecio
+
+    function setPrecio($precio){
+        $this->precio = $precio;
+    }//fin setPrecio
 
     function getTipo(){
         return $this->tipo;
@@ -83,6 +92,11 @@ class Equipo{
         $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
+    function insertarGasto(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+            $query= "INSERT INTO gastos_equipo (CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('$this->codigo_equipo', 1 ,'$this->precio')";
+            $resultado = mysqli_query($conexion,$query);
+    }//fin insertarGasto
 
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","","inventario");

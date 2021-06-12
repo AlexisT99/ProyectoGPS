@@ -52,13 +52,14 @@
                                     <option value="17">ml</option>
                                 </optgroup>
                             </select></p>
-                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="text" id="txtCantidad" style="width: 550px;" name="txtCantidad"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="number" id="txtCantidad" style="width: 550px;" name="txtCantidad"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Precio unitario:</label><input class="form-control" type="number" id="txtCantidad" style="width: 550px;" name="txtPrecio"></p>
                         <p style="padding-bottom: 0px;"></p>
                         <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 85px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
-                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento (DD/MM/AAAA):</label><input class="form-control" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento:</label><input class="form-control" placeholder="AAAA/MM/DD" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
                         <p style="padding-bottom: 0px;"></p>
                         <p style="padding-bottom: 0px;"></p>
-                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" name = "btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><a id="btnCambio" href="../AgregarEquipo/index.php">&lt;</a></p>
+                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" name = "btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><input class="form-control-file" type="submit" id="btnGuardar" name = "cantidad" value="AgregarCantidad"><a id="btnCambio" href="../AgregarEquipo/index.php">&lt;</a></p>
                     </form>
                 </div>
                 <footer>

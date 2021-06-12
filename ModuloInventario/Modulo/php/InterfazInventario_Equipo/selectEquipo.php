@@ -20,7 +20,7 @@ if($conexion){
                  <td style="width : 80px"><?=$MODELO_EQUIPO?></td>
                  <td style="width : 60px"><?=$TIPO_EQUIPO?></td>
                  <td style="width : 70px"><?=$ESTADO?></td>
-                 <td style="width : 130px"><?=$descripcion?></td>
+                 <td style="width : 110px"><?=$descripcion?></td>
                  
                  
                  
