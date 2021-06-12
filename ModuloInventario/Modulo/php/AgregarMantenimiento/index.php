@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Agregar_Material</title>
+    <title>Agregar_Mantenimiento</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -38,28 +38,41 @@
             </div>
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
-                    <form action = "../InterfazAgregarM.php" method = "POST">
-                        <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Material</h1>
-                        <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;" name="txtIdMantenimiento"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;" name="txtNombre"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad" name="cmbUnidad">
-                                <optgroup label="This is a group">
-                                    <option value="12" selected="">Kg</option>
-                                    <option value="13">T</option>
-                                    <option value="14">g</option>
-                                    <option value="15">mg</option>
-                                    <option value="16">L</option>
-                                    <option value="17">ml</option>
-                                </optgroup>
-                            </select></p>
-                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="number" id="txtCantidad" style="width: 550px;" name="txtCantidad"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Precio unitario:</label><input class="form-control" type="number" id="txtCantidad" style="width: 550px;" name="txtPrecio"></p>
-                        <p style="padding-bottom: 0px;"></p>
-                        <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 85px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
-                        <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 5px;">Fecha Vencimiento:</label><input class="form-control" placeholder="AAAA/MM/DD" type="text" id="txtFechaV" style="width: 550px;" name="txtFechaV"></p>
-                        <p style="padding-bottom: 0px;"></p>
-                        <p style="padding-bottom: 0px;"></p>
-                        <p style="margin-top: 1rem;"><input class="form-control-file" type="submit" id="btnGuardar" name = "btnGuardar" value="Guardar"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: #17164D;border-radius: 10px;color: white;"><input class="form-control-file" type="submit" id="btnGuardar" name = "cantidad" value="AgregarCantidad"><a id="btnCambio" href="../AgregarEquipo/index.php">&lt;</a></p>
+                    <form style="display: flex;">
+                        <div style="padding-left: 30px;height: 920px;border: 3px solid #764119;padding: 20px;width: 420px;">
+                            <h1 id="lblMantenimiento" style="padding-bottom: 25px;">Mantenimiento</h1>
+                            <p style="padding-bottom: 0px;"><label id="lblCodigo_M" style="padding-right: 20px;">Codigo Equipo:</label><input class="form-control" type="text" id="txtCodigo_M" style="width: 200px;" name="txtCodigo_M"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblProveedor" style="padding-right: 20px;">Proveedor:</label><input class="form-control" type="text" id="txtProveedor" style="width: 200px;" name="txtProveedor"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento:</label><input class="form-control" type="text" id="txtFechaPM" style="width: 200px;" name="txtFechaPM" placeholder="AAAA/MM/DD"></p>
+                            <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 20px;">Tipo Servicio:</label><select class="form-control" id="cmbTipoServicio" name="cmbTipoServicio">
+                                    <optgroup label="This is a group">
+                                        <option value="12" selected="">This is item 1</option>
+                                        <option value="13">This is item 2</option>
+                                        <option value="14">This is item 3</option>
+                                    </optgroup>
+                                </select></p>
+                            <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 20px;">Observaciones:</label><textarea class="form-control" id="txtObservaciones" name="txtObservaciones"></textarea></p>
+                            <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select class="form-control" id="cmbEstado" name="cmbEstado">
+                                    <optgroup label="This is a group">
+                                        <option value="12" selected="">This is item 1</option>
+                                        <option value="13">This is item 2</option>
+                                        <option value="14">This is item 3</option>
+                                    </optgroup>
+                                </select></p>
+                            <div><input class="form-control-file" type="submit" id="btnGuardar_M" value="Agregar" name="btnGuardar_M"><input class="form-control-file" type="reset" id="btnLimpiar_M" value="Limpiar" name="btnLimpiar_M"><a id="btnCambio" href="../AgregarMaterial/index.php" name="btnCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>
+                        </div>
+                    </form>
+                    <form>
+                        <div style="margin-left: 20px;border: 3px solid #764119;padding: 20px;height: 600px;margin-top: 5px;width: 400px;">
+                            <div>
+                                <h1 id="lblSeguro" style="padding-bottom: 25px;">Seguro</h1>
+                                <p style="padding-bottom: 0px;"><label id="lblCodigo_S" style="padding-right: 20px;">Codigo Equipo:</label><input class="form-control" type="text" id="txtCodigo_S" style="width: 200px;" name="txtCodigo_S"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblSeguro2" style="padding-right: 17px;">Id Seguro:</label><input class="form-control" type="text" id="txtSeguro" style="width: 200px;" name="txtSeguro"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblFechaV" style="padding-right: 17px;">Fecha Vencimiento:</label><input class="form-control" type="text" id="txtFechaV" style="width: 200px;" name="txtFechaV" placeholder="AAA/MM/DD"></p>
+                                <p style="padding-bottom: 0px;"><label id="lblCostoS" style="padding-right: 20px;">Costo Seguro:</label><input class="form-control" type="number" id="txtCostoS" style="width: 200px;" name="txtCostoS"></p>
+                            </div>
+                            <div><input class="form-control-file" type="submit" id="btnGuardar_S" value="Agregar" name="btnGuardar_S"><input class="form-control-file" type="reset" id="btnLimpiar_S" value="Limpiar" name="btnLimpiar_S"></div>
+                        </div>
                     </form>
                 </div>
                 <footer>
