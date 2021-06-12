@@ -70,12 +70,12 @@
                                                         <td id="lblUnidad">Unidad</td>
                                                         <td><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="12" selected="">Kg</option>
-                                                                    <option value="13">T</option>
-                                                                    <option value="14">g</option>
-                                                                    <option value="15">mg</option>
-                                                                    <option value="16">L</option>
-                                                                    <option value="17">ml</option>
+                                                                    <option value="KG" selected="">Kg</option>
+                                                                    <option value="T">T</option>
+                                                                    <option value="G">g</option>
+                                                                    <option value="MG">mg</option>
+                                                                    <option value="L">L</option>
+                                                                    <option value="ML">ml</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
@@ -86,6 +86,9 @@
                                                     <tr>
                                                         <td id="lblDescripcion">Descripción</td>
                                                         <td><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -118,7 +121,9 @@
                                                     </tbody>
                                                 </table>
                                             </div> 
-                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar" name ="eliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                                            <div style="display: flex;">
+                                                <input class="form-control-file" type="submit" id="btnEliminar" name ="eliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar">
+                                                <input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
                                         </div>
                                     </section>
                                 </div>
@@ -130,9 +135,11 @@
                                 <table class="table tabla-bar"  >
                                     <thead>
                                         <tr>
-                                            <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
-                                            <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 130px;">Mantenimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Fecha Mantenimiento</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Fecha Vencimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Descripcion</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -50,7 +50,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th id="lblObjeto">Objeto de inventario</th>
-                                                        <th><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></th>
+                            
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -74,14 +74,17 @@
                                                         <td id="lblTipo">Tipo</td>
                                                         <td><select class="form-control" id="cmbTipo" name="cmbTipo">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="12" selected="">Auto</option>
-                                                                    <option value="13">No Auto</option>
+                                                                    <option value="Auto" selected="">Auto</option>
+                                                                    <option value="No auto">No Auto</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
                                                     <tr>
                                                         <td id="lblDescripcion">Descripción</td>
                                                         <td><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
