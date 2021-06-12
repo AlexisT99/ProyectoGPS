@@ -50,6 +50,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th id="lblObjeto">Objeto de inventario</th>
+                                                        <th><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -75,15 +76,6 @@
                                                                 <optgroup label="This is a group">
                                                                     <option value="12" selected="">Auto</option>
                                                                     <option value="13">No Auto</option>
-                                                                </optgroup>
-                                                            </select></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="lblEstado">Estado</td>
-                                                        <td><select class="form-control" id="cmbEstado" name="cmbEstado">
-                                                                <optgroup label="This is a group">
-                                                                    <option value="12" selected="">Bueno</option>
-                                                                    <option value="13">Malo</option>
                                                                 </optgroup>
                                                             </select></td>
                                                     </tr>
@@ -114,7 +106,6 @@
                                                             <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
                                                             <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
                                                             <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
-                                                            <th scope="&quot;col&quot;" style="width: 70px">Estado</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
                                                         </tr>
                                                     </thead>
@@ -125,7 +116,11 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnEliminar"  name = "eliminar"style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar"><input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a></div>
+                                            <div style="display: flex;">
+                                                <input class="form-control-file" type="submit" id="btnEliminar"  name = "eliminar"style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar">
+                                                <input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                                <a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a>
+                                            </div>
                                         </div>
                                     </section>
                                 </div>
@@ -137,9 +132,11 @@
                                 <table class="table tabla-bar">
                                     <thead>
                                         <tr>
-                                            <th scope="&quot;col&quot;" style="width: 130px;">Código</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Fecha Mantenimiento</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Fecha Vencimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 130px;">Descripcion</th>
                                         </tr>
                                     </thead>
                                     <tbody>
