@@ -44,12 +44,12 @@
                         <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;" name="txtNombre"></p>
                         <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                 <optgroup label="This is a group">
-                                    <option value="12" selected="">Kg</option>
-                                    <option value="13">T</option>
-                                    <option value="14">g</option>
-                                    <option value="15">mg</option>
-                                    <option value="16">L</option>
-                                    <option value="17">ml</option>
+                                    <option value="KG" selected="">Kg</option>
+                                    <option value="T">T</option>
+                                    <option value="G">g</option>
+                                    <option value="MG">mg</option>
+                                    <option value="L">L</option>
+                                    <option value="ML">ml</option>
                                 </optgroup>
                             </select></p>
                         <p style="padding-bottom: 0px;"><label id="lblCantidad" style="padding-right: 110px;">Cantidad:</label><input class="form-control" type="number" id="txtCantidad" style="width: 550px;" name="txtCantidad"></p>

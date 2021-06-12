@@ -46,17 +46,17 @@
                             <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento:</label><input class="form-control" type="text" id="txtFechaPM" style="width: 200px;" name="txtFechaPM" placeholder="AAAA/MM/DD"></p>
                             <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 20px;">Tipo Servicio:</label><select class="form-control" id="cmbTipoServicio" name="cmbTipoServicio">
                                     <optgroup label="This is a group">
-                                        <option value="12" selected="">This is item 1</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
+                                        <option value="" selected="">TIPO DE SERVICIO</option>
+                                        <option value="P">PREVENTIVO</option>
+                                        <option value="C">CORRECTIVO</option>
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 20px;">Observaciones:</label><textarea class="form-control" id="txtObservaciones" name="txtObservaciones"></textarea></p>
                             <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select class="form-control" id="cmbEstado" name="cmbEstado">
                                     <optgroup label="This is a group">
-                                        <option value="12" selected="">This is item 1</option>
-                                        <option value="13">This is item 2</option>
-                                        <option value="14">This is item 3</option>
+                                        <option value="" selected="">ESTADO</option>
+                                        <option value="BUENO">BUENO</option>
+                                        <option value="MALO">MALO</option>
                                     </optgroup>
                                 </select></p>
                             <div><input class="form-control-file" type="submit" id="btnGuardar_M" value="Agregar" name="btnGuardar_M"><input class="form-control-file" type="reset" id="btnLimpiar_M" value="Limpiar" name="btnLimpiar_M"><a id="btnCambio" href="../AgregarMaterial/index.php" name="btnCambio" style="font-weight: bold;background: white;margin: 13px;">&gt;</a></div>

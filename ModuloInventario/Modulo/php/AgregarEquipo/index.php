@@ -47,15 +47,15 @@
                             <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Modelo:</label><input class="form-control" type="text" id="txtModelo" style="width: 400px;" name="txtModelo"></p>
                             <p style="padding-bottom: 0px;"><label id="lblModelo" style="padding-right: 83px;">Precio Unitario:</label><input class="form-control" type="number" id="txtModelo" style="width: 400px;" name="txtPrecio"></p>
                             <p style="padding-bottom: 0px;"><label id="lblTipo" style="padding-right: 120px;">Tipo:</label><select class="form-control" id="cmbTipo" name="cmbTipo">
-                                    <optgroup label="This is a group">
-                                        <option value="12" selected="">Auto</option>
-                                        <option value="13">No Auto</option>
+                                    <optgroup label="">
+                                        <option value="AUTO" selected="">Auto</option>
+                                        <option value="NO AUTO">No Auto</option>
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select class="form-control" id="cmbEstado" name="cmbEstado">
                                     <optgroup label="This is a group">
-                                        <option value="12" selected="">Bueno</option>
-                                        <option value="13">Malo</option>
+                                        <option value="BUENO" selected="">Bueno</option>
+                                        <option value="MALO">Malo</option>
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblDescripcion" style="padding-right: 45px;">Descripción:</label><textarea class="form-control" id="txtDescripcion" name="txtDescripcion"></textarea></p>
@@ -69,8 +69,8 @@
                                 <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Precio Mantenimiento:</label><input class="form-control" type="number" id="txtFechaPM" style="width: 400px;" name="txtPrecio"></p>
                                 <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 200px;">Tipo Servicio:</label><select class="form-control" id="txtTipoServicio">
                                         <optgroup label="This is a group">
-                                            <option value="12" selected="">P</option>
-                                            <option value="13">C</option>
+                                            <option value="P" selected="">PREVENTIVO</option>
+                                            <option value="C">CORRECTIVO</option>
                                         </optgroup>
                                     </select></p>
                                 <p style="padding-bottom: 0px;"><label id="lblObservaciones" style="padding-right: 200px;">Observaciones:</label><textarea class="form-control" id="txtObservaciones" name="txtObservaciones"></textarea></p>
