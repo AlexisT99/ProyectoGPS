@@ -8,16 +8,9 @@ $material = new Material( $_POST["txtIdMaterial"],
                      "",
                      $_POST["txtDescripcion"],
                      $_POST["txtFechaVencimiento"]);
-$material2 = new Material( $_POST["txtIdMaterial"],
-                     "",
-                     $_POST["txtCantidad"],
-                     "",
-                     "",
-                     "",
-                    "");
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnEliminar'])){
-  $material2->eliminarGM();
-  $material2->eliminar();
+  $material->eliminarGM();
+  $material->eliminar();
   header("Location: ../../Vista/InterfazInventario_Material/index.php");
 }	
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnModificar'])){

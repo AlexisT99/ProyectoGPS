@@ -115,12 +115,12 @@ class Material{
     }//fin actualizar
     function eliminar(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-        $query = "DELETE Material WHERE ID_MATERIAL = '$this->id_material'";
+        $query = "DELETE FROM Material WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function eliminarGM(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-        $query = "DELETE GASTOS_MATERIAL WHERE ID_MATERIAL = '$this->id_material'";
+        $query = "DELETE FROM GASTOS_MATERIAL WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function disminuir(){
