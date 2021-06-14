@@ -1,6 +1,5 @@
 <?php
     require 'Material.php';
-    $conexion=mysqli_connect('localhost','root','','inventario');
 
     $material = new Material( $_POST["txtIdMantenimiento"],
                      $_POST["txtNombre"],

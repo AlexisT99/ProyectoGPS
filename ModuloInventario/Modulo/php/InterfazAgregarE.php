@@ -2,7 +2,6 @@
     require 'Seguro.php';
     require 'Mantenimiento.php';
     require 'Equipo.php';
-    $conexion=mysqli_connect('localhost','root','','inventario');
 
     $equipo = new Equipo( $_POST["txtCodigo"],
                      $_POST["txtDescripcion"],
