@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Agregar_Obras</title>
+    <title>Agregar_Obras_E</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -42,43 +42,39 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
                     <main>
-                        <form>
-                            <div style="display: flex;">
-                                <div>
+                        <div style="display: flex;">
+                            <div style="display: flex;width: 200px;">
+                                <form>
+                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
+                                    <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
                                     <div></div>
-                                    <section class="article-list">
-                                        <div class="container">
-                                            <div class="intro">
-                                                <div style="display: flex;">
-                                                    <form>
-                                                        <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                                        <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
-                                                        <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
-                                                        <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;" name="btnAgregar">Agregar</a></div>
-                                                    </form>
-                                                </div>
+                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="reset" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
+                                </form>
+                            </div>
+                            <div>
+                                <section class="article-list">
+                                    <div class="container">
+                                        <div class="intro">
+                                            <h2 class="text-center">EQUIPO</h2>
+                                            <div class="table-responsive" id="tblEquipo">
+                                                <table class="table tabla-bar">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="&quot;col&quot;" style="width: 150px;">Código Equipo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 150px;">Descripción</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Disponible</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Estado</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                    </section>
-                                </div>
-                                <div>
-                                    <h2 class="text-center">EQUIPO</h2>
-                                    <div class="table-responsive" id="tblEquipo-1">
-                                        <table class="table tabla-bar">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Código Equipo</th>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Descripcion</th>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Disponible</th>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Estado</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
                                     </div>
-                                </div>
+                                </section>
                             </div>
-                        </form>
+                        </div>
                     </main>
                 </div>
                 <footer>

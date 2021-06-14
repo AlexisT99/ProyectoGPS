@@ -101,8 +101,13 @@
 }
 
 #btnAgregar {
-  border: 2px solid white;
-  border-radius: 8px;
+  font-weight: bold;
+  background: #17164D;
+  margin: 10px;
+  width: inherit;
+  color: white;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 #btnMaterial {

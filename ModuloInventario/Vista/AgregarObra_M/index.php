@@ -40,45 +40,40 @@
                 </div>
             </div>
             <div>
-                <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
+                <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;display: flex;">
                     <main>
-                        <form>
-                            <div style="display: flex;">
-                                <div>
-                                    <div></div>
-                                    <section class="article-list">
-                                        <div class="container">
-                                            <div class="intro">
-                                                <div style="display: flex;">
-                                                    <form>
-                                                        <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                                        <div><label id="lblCodigo">Material</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
-                                                        <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
-                                                        <div><label>Cantidad</label><input class="form-control" type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
-                                                        <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><a id="btnAgregar" href="" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;" name="btnAgregar">Agregar</a></div>
-                                                    </form>
-                                                </div>
+                        <div style="display: flex;">
+                            <div style="display: flex;width: 200px;">
+                                <form>
+                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
+                                    <div><label id="lblCodigo-1">Material</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
+                                    <div><label>Cantidad</label><input class="form-control" type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
+                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="reset" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
+                                </form>
+                            </div>
+                            <div>
+                                <section class="article-list">
+                                    <div class="container">
+                                        <div class="intro">
+                                            <h2 class="text-center">MATERIAL</h2>
+                                            <div class="table-responsive" id="tblEquipo">
+                                                <table class="table tabla-bar">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                                            <th scope="&quot;col&quot;" style="width: 150px;">Descripción</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Cantidad</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                    </section>
-                                </div>
-                                <div>
-                                    <h2 class="text-center">Material</h2>
-                                    <div class="table-responsive" id="tblEquipo-1">
-                                        <table class="table tabla-bar">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Id Material</th>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Descripcion</th>
-                                                    <th scope="&quot;col&quot;" style="width: 150px;">Cantidad</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
                                     </div>
-                                </div>
+                                </section>
                             </div>
-                        </form>
+                        </div>
                     </main>
                 </div>
                 <footer>
