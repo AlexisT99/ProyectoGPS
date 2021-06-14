@@ -244,7 +244,8 @@ create table MATERIAL_OBRA
 (
    ID_MATERIAL          varchar(16)  comment '',
    ID_OBRA              varchar(50)  comment '',
-   IDTRABAJADOR         int  comment ''
+   IDTRABAJADOR         int  comment '',
+   CANTIDAD             int comment ''
 );
 
 /*==============================================================*/
@@ -610,3 +611,6 @@ alter table VIAJE_INFORME_MUESTREO add constraint FK_VIAJE_IN_REFERENCE_INFORME_
 alter table VIATICOS add constraint FK_VIATICOS_REFERENCE_TRABAJAD foreign key (IDTRABAJADOR)
       references TRABAJADORES (IDTRABAJADOR) on delete restrict on update restrict;
 
+alter table EQUIPO_OBRA add constraint PK_EQUIPO_OBRA primary key(CODIGO_EQUIPO,ID_OBRA);
+
+alter table MATERIAL_OBRA add constraint PK_MATERIAL_OBRA primary key(ID_MATERIAL,ID_OBRA);
