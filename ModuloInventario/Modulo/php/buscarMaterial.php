@@ -4,7 +4,7 @@
 
  ?>
  <?php
-    include("/InterfazInventario_Equipo/index.php");
+    include("../../Vista/InterfazInventario_Equipo/index.php");
 
 $codigo = $_POST['txtBuscar'];
 $sql="SELECT * FROM materiales WHERE Id_Material = '$codigo'";

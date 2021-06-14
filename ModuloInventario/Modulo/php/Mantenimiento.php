@@ -88,7 +88,7 @@ class Mantenimiento{
 
     function insertarGastoM(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-            $query= "INSERT INTO costomantener (ID_MANTENIMIENTO,CODIGO_EQUIPO,MONTO_MANTENER)  VALUES ((SELECT ID_MANTENIMIENTO FROM Mantenimiento WHERE PROVEEDOR ='$this->proveedor' ),'$this->codigo_equipo','$this->precio')";
+            $query= "INSERT INTO costomantener (ID_MANTENIMIENTO,CODIGO_EQUIPO,MONTO_MANTENER)  VALUES ((SELECT ID_MANTENIMIENTO FROM Mantenimiento WHERE CODIGO_EQUIPO ='$this->codigo_equipo' ),'$this->codigo_equipo','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGastoM
 
@@ -104,6 +104,13 @@ class Mantenimiento{
         $query  = "DELETE FROM Mantenimiento WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
+
+    function eliminarCM(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM COSTOMANTENER WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin elimininar
+
 }//fin class Mantenimiento
 
 //$objeto1 = new Mantenimiento("12AB","Pepe","2021-06-08","Soltero","Ninguna","A","1234A");

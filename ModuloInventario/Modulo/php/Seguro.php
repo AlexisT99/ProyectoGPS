@@ -75,6 +75,13 @@ class Seguro{
         $query  = "DELETE FROM  Seguro WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
+
+    function eliminarGS(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM GASTOS_SEGURO WHERE ID_SEGURO = (SELECT ID_SEGURO FROM Seguro WHERE CODIGO_EQUIPO ='$this->codigo_equipo')";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin elimininar
+
 }//fin class Seguro
 /*
 $objeto1 = new Seguro("1","1234A","2021/06/09","13");

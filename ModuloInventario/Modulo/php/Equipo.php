@@ -94,7 +94,7 @@ class Equipo{
     }//fin insertar
     function insertarGasto(){
         $conexion = mysqli_connect("localhost","root","","inventario");
-            $query= "INSERT INTO gastos_equipo (CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('$this->codigo_equipo', 1 ,'$this->precio')";
+            $query= "INSERT INTO GASTOS_EQUIPO (CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('$this->codigo_equipo', 1 ,'$this->precio')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
 
@@ -111,6 +111,11 @@ class Equipo{
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
     
+    function eliminarGE(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query  = "DELETE FROM GASTOS_EQUIPO WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin elimininar
 }//fin class Equipo
 
 

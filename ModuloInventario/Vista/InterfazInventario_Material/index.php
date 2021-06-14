@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>InicioInv_Equipo</title>
+    <title>InicioInv_Material</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -40,44 +40,48 @@
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
                     <main>
-                        <form style="display: flex;" action = "../InterfazControlador.php" method = "POST">
+                        <form style="display: flex;" action = "../../Modulo/php/InterfazControladorMateriales.php" method = "POST">
                             <div >
                                 <div id="ventanaDerecha">
-                                    <div style="padding-bottom: 30px;"><a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Equipo</a></div>
+                                    <div style="padding-bottom: 30px;">
+                                    <a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
                                     <div>
                                         <div class="table-responsive" id="tblObjeto">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
-                                                        <th id="lblObjeto">Objeto de inventario</th>
-                            
+                                                        <th id="lblObjeto">Objeto de material</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td id="lblCodigo">Código</td>
-                                                        <td><input class="form-control" type="text" id="txtCodigo" name="txtCodigo"></td>
+                                                        <td id="lblIdMaterial">IdMaterial</td>
+                                                        <td><input class="form-control" type="text" id="txtIdMaterial" name="txtIdMaterial"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td id="lblCaracteristicas">Características</td>
-                                                        <td><input class="form-control" type="text" id="txtCaracteristicas" name="txtCaracteristicas"></td>
+                                                        <td id="lblNombre">Nombre</td>
+                                                        <td><input class="form-control" type="text" id="txtNombre" name="txtNombre"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td id="lblMarca">Marca</td>
-                                                        <td><input class="form-control" type="text" id="txtMarca" name="txtMarca"></td>
+                                                        <td id="lblCantidad">Cantidad</td>
+                                                        <td><input class="form-control" type="number" id="txtCantidad" name="txtCantidad"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td id="lblModelo">Modelo</td>
-                                                        <td><input class="form-control" type="text" id="txtModelo" name="txtModelo"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="lblTipo">Tipo</td>
-                                                        <td><select class="form-control" id="cmbTipo" name="cmbTipo">
+                                                        <td id="lblUnidad">Unidad</td>
+                                                        <td><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                                                 <optgroup label="This is a group">
-                                                                    <option value="Auto" selected="">Auto</option>
-                                                                    <option value="No auto">No Auto</option>
+                                                                    <option value="KG" selected="">Kg</option>
+                                                                    <option value="T">T</option>
+                                                                    <option value="G">g</option>
+                                                                    <option value="MG">mg</option>
+                                                                    <option value="L">L</option>
+                                                                    <option value="ML">ml</option>
                                                                 </optgroup>
                                                             </select></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="lblFechaVencimiento">Fecha Vencimiento</td>
+                                                        <td><input class="form-control" type="text" id="txtFechaVencimiento" name="txtFechaVencimiento"></td>
                                                     </tr>
                                                     <tr>
                                                         <td id="lblDescripcion">Descripción</td>
@@ -97,59 +101,57 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <div>
-                                            </div>
-                                            <h2 class="text-center">EQUIPO</h2>
+                                            <h2 class="text-center">MATERIAL</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
                                                     <thead>
                                                         <tr>
-                                                            <th scope="&quot;col&quot;" style="width: 100px">Código</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Características</th>
-                                                            <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
-                                                            <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
-                                                            <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                                            <th scope="&quot;col&quot;" style="width: 80px;">Nombre</th>
+                                                            <th scope="&quot;col&quot;" style="width: 90px;">Cantidad</th>
+                                                            <th scope="&quot;col&quot;" style="width: 80px">Unidad</th>
+                                                            <th scope="&quot;col&quot;" style="width: 150px;">FechaVencimiento</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <?php
-                                                        require_once "selectEquipo.php";
+                                                        require_once "selectMaterial.php";
                                                         ?>
                                                     </tbody>
                                                 </table>
-                                            </div>
+                                            </div> 
                                             <div style="display: flex;">
-                                                <input class="form-control-file" type="submit" id="btnEliminar"  name = "eliminar"style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar">
-                                                <input class="form-control-file" type="submit" id="btnModificar" name="modificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
-                                                <a id="btnAgregar" href="../AgregarEquipo/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a>
+                                                <input class="form-control-file" type="submit" id="btnEliminar" name ="btnEliminar" style="font-weight: bold;background: #17164D;margin: 10px;padding: 7px;width: inherit;color: white;" value="Eliminar">
+                                                <input class="form-control-file" type="submit" id="btnModificar" name="btnModificar" value="Modificar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                                <a id="btnAgregar" href="../AgregarMaterial/index.php" style="font-weight: bold;background: #17164D;margin: 10px;width: inherit;color: white;padding: 7px;">Agregar</a>
                                             </div>
                                         </div>
                                     </section>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                         <div>
                             <h2 class="text-center">Recordatorio</h2>
                             <div class="table-responsive" id="tblEquipo-1">
-                                <table class="table tabla-bar">
+                                <table class="table tabla-bar"  >
                                     <thead>
                                         <tr>
-                                            <th scope="&quot;col&quot;" style="width: 150px;">Mantenimiento</th>
+                                            <th scope="&quot;col&quot;" style="width: 130px;">Mantenimiento</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Fecha Mantenimiento</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Seguro</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Fecha Vencimiento</th>
-                                            <th scope="&quot;col&quot;" style="width: 130px;">Descripcion</th>
+                                            <th scope="&quot;col&quot;" style="width: 150px;">Descripcion</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                                        require_once "selectTabla.php";
-                                    ?>  
+                                        require_once "../InterfazInventario_Equipo/selectTabla.php";
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>
-                        </form>
+                        </div>
                     </main>
                 </div>
                 <footer>
@@ -184,6 +186,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Sidebar-Menu.js"></script>
+    
 </body>
 
 </html>

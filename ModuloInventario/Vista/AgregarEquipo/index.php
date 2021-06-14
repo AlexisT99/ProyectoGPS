@@ -38,7 +38,7 @@
             </div>
             <div>
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
-                    <form style="display: flex;" action = "../InterfazAgregarE.php" method = "POST">
+                    <form style="display: flex;" action = "../../Modulo/php/InterfazAgregarE.php" method = "POST">
                         <div> 
                             <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Equipo</h1>
                             <p style="padding-bottom: 0px;"><label id="lblCodigo" style="padding-right: 90px;">Codigo:</label><input class="form-control" type="text" id="txtCodigo" style="width: 400px;" name="txtCodigo"></p>

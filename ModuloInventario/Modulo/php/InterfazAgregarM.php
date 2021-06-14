@@ -20,11 +20,11 @@
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar'])){
         $material->insertar();
         $material->insertarGasto();
-        header("Location: AgregarMaterial/index.php");
+        header("Location: ../../Vista/AgregarMaterial/index.php");
     }
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['cantidad'])){
         $material->aumentar();
-        header("Location: AgregarMaterial/index.php");
+        header("Location: ../../Vista/AgregarMaterial/index.php");
     }
     
     

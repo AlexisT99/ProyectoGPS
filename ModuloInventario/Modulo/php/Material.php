@@ -113,7 +113,16 @@ class Material{
         else {echo 'Equipo actualizado';}
         mysqli_close($conexion);
     }//fin actualizar
-
+    function eliminar(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "DELETE Material WHERE ID_MATERIAL = '$this->id_material'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin disminuir
+    function eliminarGM(){
+        $conexion = mysqli_connect("localhost","root","","inventario");
+        $query = "DELETE GASTOS_MATERIAL WHERE ID_MATERIAL = '$this->id_material'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin disminuir
     function disminuir(){
         $conexion = mysqli_connect("localhost","root","","inventario");
         $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";

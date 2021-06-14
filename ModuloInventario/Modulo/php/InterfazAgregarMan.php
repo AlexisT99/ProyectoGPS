@@ -17,12 +17,12 @@
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar_M'])){
         $mantenimiento->insertar();
         $mantenimiento->insertarGastoM();
-        header("Location: AgregarMantenimiento/index.php");
+        header("Location: ../../Vista/AgregarMantenimiento/index.php");
     }
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar_S'])){
         $seguro->insertar();
         $seguro->insertarGastoS();
-        header("Location: AgregarMantenimiento/index.php");
+        header("Location: ../../Vista/AgregarMantenimiento/index.php");
     }
     //$mantenimiento->insertarGastoM();
 ?>
