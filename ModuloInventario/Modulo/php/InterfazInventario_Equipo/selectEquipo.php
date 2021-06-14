@@ -1,8 +1,8 @@
 <?php
 $conexion = mysqli_connect("localhost","root","","inventario");
 if($conexion){
-    $consulta = "select E.CODIGO_EQUIPO,E.DESCRIPCION_EQUIPO,E.CARACTERISTICAS,E.MARCA_EQUIPO,E.MODELO_EQUIPO, E.TIPO_EQUIPO from Equipo E";
-    $datos = $conexion->query($consulta);
+    $consulta = "SELECT E.CODIGO_EQUIPO,E.DESCRIPCION_EQUIPO,E.CARACTERISTICAS,E.MARCA_EQUIPO,E.MODELO_EQUIPO, E.TIPO_EQUIPO FROM Equipo E";
+    $datos = mysqli_query($conexion,$consulta);
         if($datos->num_rows>0){
             while($fila=$datos->fetch_assoc()){
              $CofigoEquipo =$fila['CODIGO_EQUIPO'];
@@ -19,9 +19,6 @@ if($conexion){
                  <td style="width : 80px"><?=$MODELO_EQUIPO?></td>
                  <td style="width : 60px"><?=$TIPO_EQUIPO?></td>
                  <td style="width : 110px"><?=$descripcion?></td>
-                 
-                 
-                 
             </tr>
                 <?php
 

@@ -53,7 +53,7 @@
                                     </optgroup>
                                 </select></p>
                             <p style="padding-bottom: 0px;"><label id="lblEstado" style="padding-right: 95px;">Estado:</label><select class="form-control" id="cmbEstado" name="cmbEstado">
-                                    <optgroup label="This is a group">
+                                    <optgroup label="">
                                         <option value="BUENO" selected="">Bueno</option>
                                         <option value="MALO">Malo</option>
                                     </optgroup>
@@ -68,7 +68,7 @@
                                 <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Fecha Proxima Mantenimiento:</label><input class="form-control" placeholder="AAAA/MM/DD" type="text" id="txtFechaPM" style="width: 400px;" name="txtFechaPM"></p>
                                 <p style="padding-bottom: 0px;"><label id="lblFechaPM" style="padding-right: 30px;">Precio Mantenimiento:</label><input class="form-control" type="number" id="txtFechaPM" style="width: 400px;" name="txtPrecio"></p>
                                 <p style="padding-bottom: 0px;"><label id="lblTipoServicio" style="padding-right: 200px;">Tipo Servicio:</label><select class="form-control" id="txtTipoServicio">
-                                        <optgroup label="This is a group">
+                                        <optgroup label="">
                                             <option value="P" selected="">PREVENTIVO</option>
                                             <option value="C">CORRECTIVO</option>
                                         </optgroup>
