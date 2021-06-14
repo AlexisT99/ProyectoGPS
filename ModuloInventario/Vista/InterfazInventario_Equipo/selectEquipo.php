@@ -16,9 +16,9 @@ if($conexion){
                  <td style="width : 100px"><?=$CofigoEquipo?></td>
                  <td style="width : 130px"><?=$CARACTERISTICAS?></td>
                  <td style="width : 70px"><?=$MARCA_EQUIPO?></td>
-                 <td style="width : 80px"><?=$MODELO_EQUIPO?></td>
-                 <td style="width : 60px"><?=$TIPO_EQUIPO?></td>
-                 <td style="width : 110px"><?=$descripcion?></td>
+                 <td style="width : 130px"><?=$MODELO_EQUIPO?></td>
+                 <td style="width : 130px"><?=$TIPO_EQUIPO?></td>
+                 <td style="width : 130px"><?=$descripcion?></td>
             </tr>
                 <?php
 

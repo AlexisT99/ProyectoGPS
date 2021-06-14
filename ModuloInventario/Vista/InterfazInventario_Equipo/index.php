@@ -107,8 +107,8 @@
                                                             <th scope="&quot;col&quot;" style="width: 100px">Código</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Características</th>
                                                             <th scope="&quot;col&quot;" style="width: 70px">Marca</th>
-                                                            <th scope="&quot;col&quot;" style="width: 80px">Modelo</th>
-                                                            <th scope="&quot;col&quot;" style="width: 60px">Tipo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Ubicación</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Responsable</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Descripción</th>
                                                         </tr>
                                                     </thead>
