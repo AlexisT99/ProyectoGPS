@@ -79,7 +79,7 @@ class Mantenimiento{
     }//fin setCodigoEquipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         //inserar a la base de datos un Mantenimiento
         $query = "INSERT INTO Mantenimiento(Proveedor,Fecha_Prox_M,Estado,Observaciones,Tipo_Servicio,Codigo_Equipo) 
             VALUES('$this->proveedor','$this->fecha_prox_m','$this->estado','$this->observaciones','$this->tipo_servicio','$this->codigo_equipo')";
@@ -87,26 +87,26 @@ class Mantenimiento{
     }//fin insertar
 
     function insertarGastoM(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
             $query= "INSERT INTO costomantener (ID_MANTENIMIENTO,CODIGO_EQUIPO,MONTO_MANTENER)  VALUES ((SELECT ID_MANTENIMIENTO FROM Mantenimiento WHERE CODIGO_EQUIPO ='$this->codigo_equipo' ),'$this->codigo_equipo','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGastoM
 
     function actualizar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "UPDATE Mantenimiento SET PROVEEDOR = '$this->proveedor', FECHA_PROX_M = '$this->fecha_prox_m', ESTADO = '$this->estado', OBSERVACIONES = '$this->observaciones', TIPO_SERVICIO = '$this->tipo_servicio'
             WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query ($conexion,$query);
     }//fin actualizar
 
     function eliminar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM Mantenimiento WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 
     function eliminarCM(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM COSTOMANTENER WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar

@@ -87,7 +87,7 @@ class Material{
 
 /*************************** METODOS MYSQL *********************************************************************/
     function insertar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
             $query= "INSERT INTO Material (Id_Material,NOMBRE_MATERIAL,UNIDAD_MEDIDA,CANTIDAD_MATERIAL,DESCRIPCION,Fecha_Vencido)
             VALUES ('$this->id_material','$this->nombre','$this->unidad','$this->cantidad','$this->descripcion','$this->fecha_vencido')";
             $resultado = mysqli_query($conexion,$query);
@@ -96,7 +96,7 @@ class Material{
     }//fin insertar
 
     function insertarGasto(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
             $query= "INSERT INTO gastos_material(ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('$this->id_material','$this->cantidad','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
 
@@ -104,7 +104,7 @@ class Material{
     }//fin insertarGasto
 
     function actualizar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "UPDATE  Material SET ID_MATERIAL = '$this->id_material', NOMBRE_MATERIAL = '$this->nombre', UNIDAD_MEDIDA ='$this->unidad',
                   CANTIDAD_MATERIAL = '$this->cantidad',DESCRIPCION = '$this->descripcion',FECHA_VENCIDO = '$this->fecha_vencido'  WHERE ID_MATERIAL = '$this->id_material'";
         //Realizar Actualizacion 
@@ -114,22 +114,23 @@ class Material{
         mysqli_close($conexion);
     }//fin actualizar
     function eliminar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "DELETE FROM Material WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function eliminarGM(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "DELETE FROM GASTOS_MATERIAL WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function disminuir(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
-        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
+        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_
+        MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function aumentar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "UPDATE  material SET CANTIDAD_MATERIAL=(SELECT CANTIDAD_MATERIAL FROM material WHERE ID_MATERIAL = '$this->id_material')+ '$this->unidad' ,
                   NOMBRE_MATERIAL=(SELECT NOMBRE_MATERIAL FROM material WHERE ID_MATERIAL='$this->id_material') , 
                   UNIDAD_MEDIDA=(SELECT UNIDAD_MEDIDA FROM material WHERE ID_MATERIAL='$this->id_material'),
@@ -149,7 +150,7 @@ class Material{
 */
     function buscar($id_material){
 
-        $conexion=mysqli_connect('localhost','root','','inventario');
+        $conexion=mysqli_connect('localhost','root','','dynasoft');
 
         $txtBuscar = $_POST['txtBuscar'];
         $query="SELECT * FROM materiales WHERE ID_MATERIAL = '$txtBuscar'";

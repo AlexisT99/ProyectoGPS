@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost","root","","inventario");
+$conexion = mysqli_connect("localhost","root","",'dynasoft');
 if($conexion){
     $consulta = "SELECT E.CODIGO_EQUIPO,E.DESCRIPCION_EQUIPO,E.CARACTERISTICAS,E.MARCA_EQUIPO,E.MODELO_EQUIPO, E.TIPO_EQUIPO FROM Equipo E";
     $datos = mysqli_query($conexion,$consulta);

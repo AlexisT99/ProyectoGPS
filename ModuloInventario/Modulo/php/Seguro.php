@@ -52,32 +52,32 @@ class Seguro{
     }//fin setCostoSeguro
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         //insserar a la base de datos un Seguro
         $query = "INSERT INTO Seguro VALUES('$this->id_seguro','$this->codigo_equipo','$this->fecha_vencido','$this->costo_seguro')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
     function insertarGastoS(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
             $query= "INSERT INTO gastos_seguro (ID_SEGURO,MONTO_SEGURO)  VALUES ('$this->id_seguro','$this->costo_seguro')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
 
     function actualizar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "UPDATE Seguro  SET CODIGO_EQUIPO  = '$this->codigo_equipo', FECHA_VENCIDO = '$this->fecha_vencido', COSTO_SEGURO = '$this->costo_seguro'
             WHERE ID_SEGURO = '$this->id_seguro'";
         $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM  Seguro WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
 
     function eliminarGS(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM GASTOS_SEGURO WHERE ID_SEGURO = (SELECT ID_SEGURO FROM Seguro WHERE CODIGO_EQUIPO ='$this->codigo_equipo')";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar

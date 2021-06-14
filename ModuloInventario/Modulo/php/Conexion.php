@@ -3,7 +3,7 @@
         define("servidor","localhost");
         define("usuario","root");
         define("password","");
-        define("bd","inventario");
+        define("bd","dynasoft");
         $resultado = mysqli_connect(servidor,usuario,password,bd);
         return $resultado;
     }

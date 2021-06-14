@@ -87,32 +87,32 @@ class Equipo{
     }//fin setTipo
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
-        $conexion = mysqli_connect('localhost','root','','inventario');
+        $conexion = mysqli_connect('localhost','root','','dynasoft');
         //insserar a la base de datos un equipo
         $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
     function insertarGasto(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
             $query= "INSERT INTO GASTOS_EQUIPO (CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('$this->codigo_equipo', 1 ,'$this->precio')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
 
     function actualizar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "UPDATE Equipo  SET CARACTERISTICAS  = '$this->caracteristicas', MARCA_EQUIPO = '$this->marca', MODELO_EQUIPO = '$this->modelo', TIPO_EQUIPO = '$this->tipo',
             DESCRIPCION_EQUIPO = '$this->descripcion' WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
            $resultado = mysqli_query ($conexion,$query );
     }//fin actualizar
 
     function eliminar(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM  Equipo WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
     
     function eliminarGE(){
-        $conexion = mysqli_connect("localhost","root","","inventario");
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM GASTOS_EQUIPO WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar

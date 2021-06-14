@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost","root","","inventario");
+$conexion = mysqli_connect("localhost","root","",'dynasoft');
 if($conexion){
     $consulta = "select M.ID_MANTENIMIENTO,M.FECHA_PROX_M,S.ID_SEGURO,S.FECHA_VENCIDO,E.DESCRIPCION_EQUIPO from Equipo E 
     INNER JOIN Mantenimiento M ON E.CODIGO_EQUIPO = M.CODIGO_EQUIPO
