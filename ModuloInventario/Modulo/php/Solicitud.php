@@ -28,10 +28,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnAgregar'])){
     }*/
     if($codigo_equipo!=""){
         //Se Actualizar el estado
-        $query = "UPDATE Equipo  SET DISPONIBLE = 'I' WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+        $query = "UPDATE Equipo  SET DISPONIBLE = 'I' WHERE CODIGO_EQUIPO = '$codigo_equipo'";
         $resultado = mysqli_query ($conexion,$query );
         //Se valida
-        $query = "UPDATE INCIDENTES SET Estado = 'Autorizado' WHERE ID_INCIDENTE = id_incidente";
+        $query = "UPDATE INCIDENTES SET Estado = 'Autorizado' WHERE ID_INCIDENTE = '$id_incidente'";
         $resultado = mysqli_query ($conexion,$query );
     }
     
