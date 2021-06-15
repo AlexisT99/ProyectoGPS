@@ -7,7 +7,11 @@ $material = new Material( $_POST["txtIdMaterial"],
                      $_POST["cmbUnidad"],
                      "",
                      $_POST["txtDescripcion"],
-                     $_POST["txtFechaVencimiento"]);
+                     $_POST["txtFechaVencimiento"],
+                     "",
+                    "");
+
+                     
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnEliminar'])){
   $material->eliminarGM();
   $material->eliminar();

@@ -85,11 +85,12 @@ class Equipo{
     function setTpo($tipo){
         $this->tipo = $tipo;
     }//fin setTipo
+
 /*********************************METODOS MYSQL************************************************************/
     function insertar(){
         $conexion = mysqli_connect('localhost','root','','dynasoft');
         //insserar a la base de datos un equipo
-        $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo')";
+        $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo','D')";
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
     function insertarGasto(){
@@ -116,6 +117,7 @@ class Equipo{
         $query  = "DELETE FROM GASTOS_EQUIPO WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar
+
 }//fin class Equipo
 
 

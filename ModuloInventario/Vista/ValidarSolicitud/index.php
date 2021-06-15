@@ -45,7 +45,7 @@
                     <main>
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
-                                <form>
+                                <form action = "../../Modulo/php/Solicitud.php" method = "POST">
                                     <div><label>Id Incidente</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
                                     <div></div>
                                     <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnAgregar" value="Validar" name="btnAgregar"></div>
@@ -67,7 +67,11 @@
                                                             <th scope="&quot;col&quot;" style="width: 130px">Id Obra</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody></tbody>
+                                                    <tbody>
+                                                    <?php
+                                                        require_once "Select_New.php";
+                                                    ?>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>

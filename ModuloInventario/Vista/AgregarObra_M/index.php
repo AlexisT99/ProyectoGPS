@@ -46,12 +46,12 @@
                     <main>
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
-                                <form>
+                            <form action = "../../Modulo/php/InterfazAgregarObraM.php" method = "POST">
                                     <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
                                     <div><label id="lblCodigo-1">Material</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
                                     <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
                                     <div><label>Cantidad</label><input class="form-control" type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
-                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="reset" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
+                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
                                 </form>
                             </div>
                             <div>
@@ -68,7 +68,11 @@
                                                             <th scope="&quot;col&quot;" style="width: 130px">Cantidad</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody></tbody>
+                                                    <tbody>
+                                                    <?php
+                                                     require_once "../AgregarObra_M/selectTabla.php";
+                                                    ?>
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>
@@ -85,9 +89,14 @@
                                             <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Id Obra</th>
                                             <th scope="&quot;col&quot;" style="width: 190px;">Nombre Trabajador</th>
+                                            <th scope="&quot;col&quot;" style="width: 100px;">Cantidad</th>
                                         </tr>
                                     </thead>
-                                    <tbody></tbody>
+                                    <tbody>
+                                    <?php
+                                        require_once "../AgregarObra_M/selectTablaObra.php";
+                                    ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
