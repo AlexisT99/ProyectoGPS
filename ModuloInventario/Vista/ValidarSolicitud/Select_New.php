@@ -26,3 +26,5 @@ if($conexion){
                  
             </tr>
                 <?php
+        }
+}
