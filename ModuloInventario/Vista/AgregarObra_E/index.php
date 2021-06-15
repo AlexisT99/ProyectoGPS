@@ -46,8 +46,8 @@
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
                                 <form action="../../Modulo/php/ManejadorEquipoObra.php" method="POST">
-                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" name = "txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                    <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" name = "txtCodigo"style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" required name = "txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
+                                    <div><label id="lblCodigo">Codigo Equipo</label><input required class="form-control" type="text" id="txtCodigo" name = "txtCodigo"style="margin-top: 10px;" name="txtCodigo"></div>
                                     <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajador" name = "txtTrabajador"style="margin-top: 10px;" name="txtTrabajo"></div>
                                     <div></div>
                                     <div style="display: flex;">
@@ -93,7 +93,11 @@
                                             <th scope="&quot;col&quot;" style="width: 180px;">Nombre Trabajador</th>
                                         </tr>
                                     </thead>
-                                    <tbody></tbody>
+                                    <tbody>
+                                        <?php 
+                                            require_once 'LlenarTablaEO.php';
+                                        ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
