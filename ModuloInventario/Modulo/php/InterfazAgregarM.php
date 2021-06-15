@@ -10,16 +10,6 @@
                      $_POST["txtFechaV"],
                     "",
                     "");
-
-    $material2 = new Material( $_POST["txtIdMaterial"],
-                     "",
-                     $_POST["txtCantidad"],
-                    "",
-                     "",
-                     "",
-                    "",
-                    "",
-                    ""); 
                      
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar'])){
         $material->insertar();

@@ -151,7 +151,7 @@ class Material{
     }//fin disminuir
     function aumentar(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
-        $query = "UPDATE  material SET CANTIDAD_MATERIAL=(SELECT CANTIDAD_MATERIAL FROM material WHERE ID_MATERIAL = '$this->id_material')+ '$this->unidad' ,
+        $query = "UPDATE  material SET CANTIDAD_MATERIAL=(SELECT CANTIDAD_MATERIAL FROM material WHERE ID_MATERIAL = '$this->id_material')+ '$this->cantidad' ,
                   NOMBRE_MATERIAL=(SELECT NOMBRE_MATERIAL FROM material WHERE ID_MATERIAL='$this->id_material') , 
                   UNIDAD_MEDIDA=(SELECT UNIDAD_MEDIDA FROM material WHERE ID_MATERIAL='$this->id_material'),
                   DESCRIPCION=(SELECT DESCRIPCION FROM material WHERE ID_MATERIAL='$this->id_material'), 
