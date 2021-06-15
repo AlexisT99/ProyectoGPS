@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Agregar_Obras_E</title>
+    <title>Agregar_Obras_M</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -23,8 +23,10 @@
                 <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
                 <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a><a href="../AgregarMantenimiento/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Mantenimiento/Seguro</a></li>
                 <li> <a href="../AgregarObra_M/index.php" style="color: rgb(255,255,255);font-size: 19px;">Obras Material</a></li>
+                <li> </li>
                 <li> <a href="../AgregarObra_E/index.php" style="color: rgb(255,255,255);font-size: 19px;">Obras Equipo</a></li>
                 <li> </li>
+                <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
@@ -40,33 +42,30 @@
                 </div>
             </div>
             <div>
-                <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;">
+                <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 120px;padding-bottom: 120px;display: flex;">
                     <main>
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
-                                <form action="../../Modulo/php/ManejadorEquipoObra.php" method="POST">
-                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" name = "txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                    <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" name = "txtCodigo"style="margin-top: 10px;" name="txtCodigo"></div>
-                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajador" name = "txtTrabajador"style="margin-top: 10px;" name="txtTrabajo"></div>
-                                    <div></div>
-                                    <div style="display: flex;">
-                                        <input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
-                                        <input class="form-control-file" type="submit" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
+                                <form>
+                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
+                                    <div><label id="lblCodigo-1">Material</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
+                                    <div><label>Cantidad</label><input class="form-control" type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
+                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="reset" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
                                 </form>
                             </div>
                             <div>
                                 <section class="article-list">
-                                    <div class="container">
+                                    <div class="container" style="display: flex;">
                                         <div class="intro">
-                                            <h2 class="text-center">EQUIPO</h2>
+                                            <h2 class="text-center">MATERIAL</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
                                                     <thead>
                                                         <tr>
-                                                            <th scope="&quot;col&quot;" style="width: 150px;">Código Equipo</th>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
                                                             <th scope="&quot;col&quot;" style="width: 150px;">Descripción</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Disponible</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Estado</th>
+                                                            <th scope="&quot;col&quot;" style="width: 130px">Cantidad</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody></tbody>
@@ -78,14 +77,14 @@
                             </div>
                         </div>
                         <div class="intro">
-                            <h2 class="text-center">EQUIPO DE OBRA</h2>
+                            <h2 class="text-center">MATERIAL EN OBRA</h2>
                             <div class="table-responsive" id="tblEquipo-1">
                                 <table class="table tabla-bar">
                                     <thead>
                                         <tr>
-                                            <th scope="&quot;col&quot;" style="width: 150px;">Código Equipo</th>
+                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Id Obra</th>
-                                            <th scope="&quot;col&quot;" style="width: 180px;">Nombre Trabajador</th>
+                                            <th scope="&quot;col&quot;" style="width: 190px;">Nombre Trabajador</th>
                                         </tr>
                                     </thead>
                                     <tbody></tbody>
