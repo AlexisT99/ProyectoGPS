@@ -9,9 +9,12 @@ class Material{
     public $descripcion;
     public $fecha_vencido;
     public $txtBuscar;
+    public $id_obra;
+    public $id_trabajo;
+    
 
     /******Constructor******/ 
-    function __construct($id_material,$nombre,$cantidad,$unidad,$precio,$descripcion,$fecha_vencido){
+    function __construct($id_material,$nombre,$cantidad,$unidad,$precio,$descripcion,$fecha_vencido,$id_obra,$id_trabajo){
         $this->id_material = $id_material;
         $this->nombre = $nombre;
         $this->cantidad = $cantidad;
@@ -19,6 +22,8 @@ class Material{
         $this->precio = $precio;
         $this->descripcion = $descripcion;
         $this->fecha_vencido = $fecha_vencido;
+        $this->id_obra = $id_obra;
+        $this->id_trabajo = $id_trabajo;
     }// fin Constructor
     
     
@@ -85,6 +90,22 @@ class Material{
         $this->fecha_vencido = $fecha_vencido;
     }//fin setFechaVencido
 
+    function getObra(){
+        return $this->id_obra;
+    }//fin getFechaVencido
+
+    function setObra($id_obra){
+        $this->id_obra = $id_obra;
+    }//fin setFechaVencido
+
+    function getTrabajo(){
+        return $this->id_trabajo;
+    }//fin getFechaVencido
+
+    function setTrabajo($id_trabajo){
+        $this->id_trabajo = $id_trabajo;
+    }//fin setFechaVencido
+
 /*************************** METODOS MYSQL *********************************************************************/
     function insertar(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
@@ -125,8 +146,7 @@ class Material{
     }//fin disminuir
     function disminuir(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
-        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_
-        MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
+        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL-1 WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function aumentar(){
@@ -156,6 +176,20 @@ class Material{
         $query="SELECT * FROM materiales WHERE ID_MATERIAL = '$txtBuscar'";
         $result=mysqli_query($conexion,$query);
     }
+
+    function InsertarObra(){ 
+    $conexion = mysqli_connect("localhost","root","",'dynasoft');
+    $query= "INSERT INTO material_obra(ID_MATERIAL,ID_OBRA,IDTRABAJADOR,CANTIDAD)
+    VALUES ('$this->id_material','$this->id_obra','$this->id_trabajo','$this->cantidad')";
+    $resultado = mysqli_query($conexion,$query);
+    
+    mysqli_close($conexion);
+    }
+    function disminuirObra(){
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
+        $query = "UPDATE Material SET CANTIDAD_MATERIAL = CANTIDAD_MATERIAL- '$this->cantidad' WHERE ID_MATERIAL = '$this->id_material'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin disminuir
 }//fin class Material
 
 //$objeto1 = new Material("1234aB","Material1","3","LT","Juan bananas","2021-06-08");

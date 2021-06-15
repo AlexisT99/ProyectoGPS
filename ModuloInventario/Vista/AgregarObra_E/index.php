@@ -67,7 +67,6 @@
                                                             <th scope="&quot;col&quot;" style="width: 150px;">Código Equipo</th>
                                                             <th scope="&quot;col&quot;" style="width: 150px;">Descripción</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Disponible</th>
-                                                            <th scope="&quot;col&quot;" style="width: 130px">Estado</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody></tbody>

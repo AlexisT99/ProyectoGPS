@@ -3,18 +3,22 @@
 
     $material = new Material( $_POST["txtIdMantenimiento"],
                      $_POST["txtNombre"],
-                     $_POST["cmbUnidad"],
                      $_POST["txtCantidad"],
+                     $_POST["cmbUnidad"],
                      $_POST["txtPrecio"],
                      $_POST["txtDescripcion"],
-                     $_POST["txtFechaV"]);
+                     $_POST["txtFechaV"],
+                    "",
+                    "");
 
     $material2 = new Material( $_POST["txtIdMaterial"],
                      "",
                      $_POST["txtCantidad"],
+                    "",
                      "",
                      "",
-                     "",
+                    "",
+                    "",
                     ""); 
                      
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnGuardar'])){
