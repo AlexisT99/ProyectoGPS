@@ -44,12 +44,14 @@
                     <main>
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
-                                <form>
-                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                    <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
-                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
+                                <form action="../../Modulo/php/ManejadorEquipoObra.php" method="POST">
+                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" name = "txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
+                                    <div><label id="lblCodigo">Codigo Equipo</label><input class="form-control" type="text" id="txtCodigo" name = "txtCodigo"style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajador" name = "txtTrabajador"style="margin-top: 10px;" name="txtTrabajo"></div>
                                     <div></div>
-                                    <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="reset" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
+                                    <div style="display: flex;">
+                                        <input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                        <input class="form-control-file" type="submit" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
                                 </form>
                             </div>
                             <div>
