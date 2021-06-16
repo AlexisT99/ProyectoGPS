@@ -1,7 +1,7 @@
 <?php
 $conexion = mysqli_connect("localhost","root","",'dynasoft');
 if($conexion){
-    $consulta = "SELECT ID_MATERIAL,ID_OBRA,NOMBRETRAB,CANTIDAD
+    $consulta = "SELECT ID_MATERIAL,ID_OBRA,CONCAT_ws(' ',NOMBRETRAB,APEPATTRAB,APEMATTRAB) AS TRABAJADOR,CANTIDAD
     FROM material_obra
     INNER JOIN trabajadores ON material_obra.IDTRABAJADOR = trabajadores.IDTRABAJADOR;";
     
@@ -10,7 +10,7 @@ if($conexion){
             while($fila=$datos->fetch_assoc()){
              $idMaterial =$fila['ID_MATERIAL'];
              $obra =$fila['ID_OBRA'];
-             $nombre =$fila['NOMBRETRAB'];
+             $nombre =$fila['TRABAJADOR'];
              $Cantidad =$fila['CANTIDAD'];
              ?>
              <tr>
@@ -20,11 +20,8 @@ if($conexion){
                  <td style="width : 90px"><?=$Cantidad?></td>
                  
                  
-                 
             </tr>
                 <?php
-
-    
            
 
             }

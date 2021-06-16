@@ -19,7 +19,7 @@
     <div id="wrapper">
         <div id="sidebar-wrapper" style="background: rgb(19,46,77);">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
+            <li class="sidebar-brand"> <a href="../../../index.php?action=inicio" style="font-weight: bold;color: rgb(255,255,255);font-size: 24px;">DynaSoft</a></li>
                 <li> <a href="../InterfazInventario_Equipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Inventario</a></li>
                 <li> <a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 19px;">Agregar</a><a href="../AgregarMaterial/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Material</a><a href="../AgregarEquipo/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Equipo</a><a href="../AgregarMantenimiento/index.php" style="color: rgb(255,255,255);font-size: 16px;margin: 0px;padding: 5px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 15px;">Mantenimiento/Seguro</a></li>
                 <li> <a href="../AgregarObra_M/index.php" style="color: rgb(255,255,255);font-size: 19px;">Obras Material</a></li>
@@ -28,7 +28,9 @@
                 <li> </li>
                 <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
-                <li class="sidebar-brand" style="margin-top: 100px;"> <a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a><a href="#" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
+                <li class="sidebar-brand" style="margin-top: 100px;"> 
+                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
+                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -47,10 +49,46 @@
                         <div style="display: flex;">
                             <div style="display: flex;width: 200px;">
                             <form action = "../../Modulo/php/InterfazAgregarObraM.php" method = "POST">
-                                    <div><label>Id Obra</label><input class="form-control" type="text" id="txtidObra" style="margin-top: 10px;" name="txtidObra"></div>
-                                    <div><label id="lblCodigo-1">Material</label><input class="form-control" type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
-                                    <div><label>Id Trabajador</label><input class="form-control" type="text" id="txtTrabajo" style="margin-top: 10px;" name="txtTrabajo"></div>
-                                    <div><label>Cantidad</label><input class="form-control" type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
+                                    <div><label>Id Obra</label>
+                                                            <select class="form-control" id="txtidObra" name="txtidObra">
+                                                                <option value = "" selected=""></option>
+                                                                <?php
+                                                                    $conexion = mysqli_connect("localhost","root","",'dynasoft');
+                                                                    $query = "SELECT ID_OBRA FROM registro_obras";
+                                                                    $datos = mysqli_query($conexion,$query);//$conexion->query($query);
+                                                                    if($datos->num_rows>0){
+                                                                        while($fila=$datos->fetch_assoc()){
+                                                                            $id_obra = $fila['ID_OBRA'];
+                                                                ?> 
+                                                                           <option value = "<?php echo $id_obra ?>"><?php echo $id_obra ?></option>
+                                                                <?php               
+                                                                        }//fin while
+                                                                    }//fin if
+                                                                ?>
+                                                            </select>
+                                    </div>
+                                    <div><label id="lblCodigo-1">Material</label><input class="form-control" required type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label>Nombre Trabajador</label>
+                                                            <select class="form-control" id="txtTrabajo" name="txtTrabajo">
+                                                                <option value = "" selected=""></option>
+                                                                <?php
+                                                                    $conexion = mysqli_connect("localhost","root","",'dynasoft');
+                                                                    $query = "SELECT IDTRABAJADOR,CONCAT_ws(' ',NOMBRETRAB,APEPATTRAB,APEMATTRAB) AS TRABAJADOR FROM `trabajadores`";
+                                                                    $datos = mysqli_query($conexion,$query);//$conexion->query($query);
+                                                                    if($datos->num_rows>0){
+                                                                        while($fila=$datos->fetch_assoc()){
+                                                                            $id_trabajador = $fila['IDTRABAJADOR'];
+                                                                            $nombre_trabajador = $fila['TRABAJADOR'];
+                                                                           
+                                                                ?> 
+                                                                           <option value = "<?php echo $id_trabajador ?>"><?php echo $nombre_trabajador ?></option>
+                                                                <?php               
+                                                                        }//fin while
+                                                                    }//fin if
+                                                                ?>
+                                                            </select>
+                                    </div>
+                                    <div><label>Cantidad</label><input class="form-control" required type="text" id="txtCantidad" style="margin-top: 10px;" name="txtCantidad"></div>
                                     <div style="display: flex;"><input class="form-control-file" type="reset" id="btnLimpiar" value="Limpiar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;"><input class="form-control-file" type="submit" id="btnAgregar" value="Agregar" name="btnAgregar"></div>
                                 </form>
                             </div>

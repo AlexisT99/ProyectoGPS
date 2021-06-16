@@ -90,7 +90,7 @@ class Equipo{
     function insertar(){
         $conexion = mysqli_connect('localhost','root','','dynasoft');
         //insserar a la base de datos un equipo
-        $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo','D')";
+        $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','1','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo','D')";
         ChromePhp::log($query);
         $resultado = mysqli_query ($conexion,$query );
     }//fin insertar
