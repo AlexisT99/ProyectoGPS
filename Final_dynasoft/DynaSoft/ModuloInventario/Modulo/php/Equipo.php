@@ -102,10 +102,10 @@ class Equipo{
             $fila=$datos->fetch_assoc();
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
-            $query = "UPDATE FROM gastos SET MONTO = ($total + $this->precio) WHERE IDGASTO = '2'";
+            $query = "UPDATE gastos SET MONTO = ($total + $this->precio) WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el gastoEquipo
-            $query= "INSERT INTO GASTOS_EQUIPO (IDGASTO,CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('2','$this->codigo_equipo', 1 ,'$this->precio')";
+            $query= "INSERT INTO GASTOS_EQUIPO (IDGASTO,CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('2','$this->codigo_equipo', '1' ,'$this->precio')";
             ChromePhp::log($query);
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto

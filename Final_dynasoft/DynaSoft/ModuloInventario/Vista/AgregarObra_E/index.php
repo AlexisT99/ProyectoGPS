@@ -29,8 +29,8 @@
                 <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> 
-                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
-                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
+                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
+                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -99,7 +99,7 @@
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
-                                            <h2 class="text-center">EQUIPO</h2>
+                                            <h2 class="text-center">EQUIPO EN INVENTARIO</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
                                                     <thead>

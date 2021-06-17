@@ -28,8 +28,8 @@
                 <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> 
-                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
-                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
+                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
+                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -46,7 +46,7 @@
                 <div class="jumbotron" style="background: rgba(233,236,239,0);padding-top: 34px;padding-bottom: 0px;">
                     <form action = "../../Modulo/php/InterfazAgregarM.php" method = "POST">
                         <h1 id="lblAgregarE" style="padding-bottom: 25px;">Agregar Material</h1>
-                        <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Id Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;" name="txtIdMantenimiento"></p>
+                        <p style="padding-bottom: 0px;"><label id="lblIdMantenimiento" style="padding-right: 90px;">Codigo Material:</label><input class="form-control" type="text" id="txtIdMantenimiento" style="width: 550px;" name="txtIdMantenimiento"></p>
                         <p style="padding-bottom: 0px;"><label id="lblNombre" style="padding-right: 115px;">Nombre:</label><input class="form-control" type="text" id="txtNombre" style="width: 550px;" name="txtNombre"></p>
                         <p style="padding-bottom: 0px;"><label id="lblUnidad" style="padding-right: 128px;">Unidad:</label><select class="form-control" id="cmbUnidad" name="cmbUnidad">
                                 <optgroup label="This is a group">

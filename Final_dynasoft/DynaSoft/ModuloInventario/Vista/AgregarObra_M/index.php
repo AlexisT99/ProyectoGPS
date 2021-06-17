@@ -29,8 +29,8 @@
                 <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> 
-                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
-                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
+                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
+                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -67,7 +67,7 @@
                                                                 ?>
                                                             </select>
                                     </div>
-                                    <div><label id="lblCodigo-1">Material</label><input class="form-control" required type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
+                                    <div><label id="lblCodigo-1">Codigo Material</label><input class="form-control" required type="text" id="txtCodigo" style="margin-top: 10px;" name="txtCodigo"></div>
                                     <div><label>Nombre Trabajador</label>
                                                             <select class="form-control" id="txtTrabajo" name="txtTrabajo">
                                                                 <option value = "" selected=""></option>
@@ -96,12 +96,12 @@
                                 <section class="article-list">
                                     <div class="container" style="display: flex;">
                                         <div class="intro">
-                                            <h2 class="text-center">MATERIAL</h2>
+                                            <h2 class="text-center">MATERIAL EN INVENTARIO</h2>
                                             <div class="table-responsive" id="tblEquipo">
                                                 <table class="table tabla-bar">
                                                     <thead>
                                                         <tr>
-                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                                            <th scope="&quot;col&quot;" style="width: 100px">Codigo Material</th>
                                                             <th scope="&quot;col&quot;" style="width: 150px;">Descripción</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Cantidad</th>
                                                         </tr>
@@ -124,7 +124,7 @@
                                 <table class="table tabla-bar">
                                     <thead>
                                         <tr>
-                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                            <th scope="&quot;col&quot;" style="width: 100px">Codigo Material</th>
                                             <th scope="&quot;col&quot;" style="width: 150px;">Id Obra</th>
                                             <th scope="&quot;col&quot;" style="width: 190px;">Nombre Trabajador</th>
                                             <th scope="&quot;col&quot;" style="width: 100px;">Cantidad</th>

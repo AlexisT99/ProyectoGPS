@@ -125,7 +125,7 @@ class Material{
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
             $total = $total + ($this->cantidad * $this->precio);
-            $query = "UPDATE FROM gastos SET MONTO = $total WHERE IDGASTO = '2'";
+            $query = "UPDATE gastos SET MONTO = $total WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el gastoMaterial
             $query= "INSERT INTO gastos_material(IDGASTO,ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('2','$this->id_material','$this->cantidad','$this->precio')";

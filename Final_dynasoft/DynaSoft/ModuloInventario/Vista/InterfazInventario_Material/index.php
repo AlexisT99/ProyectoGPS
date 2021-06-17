@@ -1,3 +1,25 @@
+<?php
+$conexion = mysqli_connect("localhost","root","",'dynasoft');
+if($conexion){
+    $consulta = "SELECT ESTADO_PETICION FROM incidentes";
+    $datos = $conexion->query($consulta);
+        if($datos->num_rows>0){
+            while($fila=$datos->fetch_assoc()){
+                $Estado =$fila['ESTADO_PETICION'];
+
+                if($Estado == "Pendiente"){
+                    echo '<div class = "formulario-div" style ="color:blue">
+                    <h1 style = "text-align:center">'."Nuevo Incidente".'</h1>
+                    <p></p>
+                    <h4 style = "text-align:center">Redireccionando...</h4>
+                    </div>';
+                    header('refresh:2,url =../../Vista/ValidarSolicitud/index.php');
+                }
+            }
+
+        }
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +51,8 @@
                 <li> <a href="../ValidarSolicitud/index.php" style="color: rgb(255,255,255);font-size: 19px;">Solicitud Incidentes</a></li>
                 <li> </li>
                 <li class="sidebar-brand" style="margin-top: 100px;"> 
-                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
-                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
+                <a href="../../../index.php?action=iniModNom" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;">Ir a Nomina</a>
+                <a href="../../../ModuloObra/obra-index.php" style="font-weight: bold;color: rgb(255,255,255);font-size: 22px;margin-top: -25px;">Ir a Obra</a></li>
             </ul>
         </div>
         <div class="page-content-wrapper">
@@ -61,7 +83,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td id="lblIdMaterial">IdMaterial</td>
+                                                        <td id="lblIdMaterial">Codigo Material</td>
                                                         <td><input class="form-control" type="text" id="txtIdMaterial" name="txtIdMaterial"></td>
                                                     </tr>
                                                     <tr>
@@ -103,7 +125,10 @@
                                 </div>
                             </div>
                             <div>
-                                <div></div>
+                                <div style= "display:flex;">
+                                <input class="form-control" type="text" id="txtNombre" name="txtBuscar" style = "margin-bottom:10px">
+                                <input class="form-control-file" type="submit" id="btnModificar" name="btnBuscar" value="Buscar" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">
+                                </div>
                                 <section class="article-list">
                                     <div class="container">
                                         <div class="intro">
@@ -112,7 +137,7 @@
                                                 <table class="table tabla-bar">
                                                     <thead>
                                                         <tr>
-                                                            <th scope="&quot;col&quot;" style="width: 100px">IdMaterial</th>
+                                                            <th scope="&quot;col&quot;" style="width: 120px">Codigo Material</th>
                                                             <th scope="&quot;col&quot;" style="width: 80px;">Nombre</th>
                                                             <th scope="&quot;col&quot;" style="width: 90px;">Cantidad</th>
                                                             <th scope="&quot;col&quot;" style="width: 80px">Unidad</th>

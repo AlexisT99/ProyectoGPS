@@ -1,6 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost","root","",'dynasoft');
-    
+   
 if($conexion){
     $consulta = "select * from MATERIAL";
     $datos = $conexion->query($consulta);
@@ -31,11 +30,11 @@ if($conexion){
 
             }
 
+        }
 }
 
-}
 $query= "INSERT INTO `gastos` (`IDGASTO`, `IDTRABAJADOR`, `FECHAGASTO`, `MONTO`, `DESCRIPCION`) VALUES
-    (2, 1, '2021-06-18', 0, 'Gasto de compra')";
+    ('2', '1', '2021-06-18', '0',' 'Gasto de compra')";
     $resultado = mysqli_query($conexion,$query);
 
 ?>
