@@ -118,7 +118,17 @@ class Material{
 
     function insertarGasto(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
-            $query= "INSERT INTO gastos_material(ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('$this->id_material','$this->cantidad','$this->precio')";
+            //Se busca el total del gasto
+            $query = "SELECT MONTO FROM gastos WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            $fila=$datos->fetch_assoc();
+                    $total = $fila['MONTO'];
+            //Se actualiza el total de gasto
+            $total = $total + ($this->cantidad * $this->precio);
+            $query = "UPDATE FROM gastos SET MONTO = $total WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            //Se inserta el gastoMaterial
+            $query= "INSERT INTO gastos_material(IDGASTO,ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('2','$this->id_material','$this->cantidad','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
 
         mysqli_close($conexion);
@@ -142,6 +152,11 @@ class Material{
     function eliminarGM(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query = "DELETE FROM GASTOS_MATERIAL WHERE ID_MATERIAL = '$this->id_material'";
+        $resultado = mysqli_query($conexion,$query);
+    }//fin disminuir
+    function eliminarMO(){
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
+        $query = "DELETE FROM material_obra WHERE ID_MATERIAL = '$this->id_material'";
         $resultado = mysqli_query($conexion,$query);
     }//fin disminuir
     function disminuir(){

@@ -96,7 +96,16 @@ class Equipo{
     }//fin insertar
     function insertarGasto(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
-            $query= "INSERT INTO GASTOS_EQUIPO (CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('$this->codigo_equipo', 1 ,'$this->precio')";
+            //Se busca el total del gasto
+            $query = "SELECT MONTO FROM gastos WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            $fila=$datos->fetch_assoc();
+                    $total = $fila['MONTO'];
+            //Se actualiza el total de gasto
+            $query = "UPDATE FROM gastos SET MONTO = ($total + $this->precio) WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            //Se inserta el gastoEquipo
+            $query= "INSERT INTO GASTOS_EQUIPO (IDGASTO,CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('2','$this->codigo_equipo', 1 ,'$this->precio')";
             ChromePhp::log($query);
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
@@ -119,6 +128,13 @@ class Equipo{
     function eliminarGE(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
         $query  = "DELETE FROM GASTOS_EQUIPO WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
+        ChromePhp::log($query);
+        $resultado = mysqli_query($conexion,$query);
+    }//fin elimininar
+
+    function eliminarEO(){
+        $conexion = mysqli_connect("localhost","root","",'dynasoft');
+        $query  = "DELETE FROM equipo_obra WHERE CODIGO_EQUIPO = '$this->codigo_equipo'";
         ChromePhp::log($query);
         $resultado = mysqli_query($conexion,$query);
     }//fin elimininar

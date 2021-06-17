@@ -82,7 +82,6 @@
                                                     <thead>
                                                         <tr>
                                                             <th scope="&quot;col&quot;" style="width: 120px;">Id Incidente</th>
-                                                            <th scope="&quot;col&quot;" style="width: 110px;">Id Material</th>
                                                             <th scope="&quot;col&quot;" style="width: 140px;">Codigo Equipo</th>
                                                             <th scope="&quot;col&quot;" style="width: 100px;">Estado</th>
                                                             <th scope="&quot;col&quot;" style="width: 130px">Id Obra</th>

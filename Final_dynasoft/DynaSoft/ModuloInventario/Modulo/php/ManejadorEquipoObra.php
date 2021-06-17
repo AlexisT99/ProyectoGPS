@@ -16,13 +16,20 @@
         $query = "UPDATE Equipo  SET DISPONIBLE = 'O' WHERE CODIGO_EQUIPO = '$codigo_equipo'";
         mysqli_query ($conexion,$query );
         header("Location: ../../Vista/AgregarObra_E/index.php");
-    }else{
-        echo '<div class = "formulario-div" style ="color:blue">';
-        echo '<h1 style = "text-align:center">'."PRODUCTO OCUPADO".'</h1>';
-        echo '<p></p>';
-        echo '<h4 style = "text-align:center">Redireccionando...</h4>';
-        echo '</div>';
-        header('refresh:1,url =../../Vista/AgregarObra_E/index.php');
     }
-
+        if($disponible == 'I'){
+            echo '<div class = "formulario-div" style ="color:blue">';
+            echo '<h1 style = "text-align:center">'."PRODUCTO INSERVIBLE".'</h1>';
+            echo '<p></p>';
+            echo '<h4 style = "text-align:center">Redireccionando...</h4>';
+            echo '</div>';
+            header('refresh:1,url =../../Vista/AgregarObra_E/index.php');
+        }else {
+            echo '<div class = "formulario-div" style ="color:blue">';
+            echo '<h1 style = "text-align:center">'."PRODUCTO OCUPADO".'</h1>';
+            echo '<p></p>';
+            echo '<h4 style = "text-align:center">Redireccionando...</h4>';
+            echo '</div>';
+            header('refresh:1,url =../../Vista/AgregarObra_E/index.php');
+        }
 ?>

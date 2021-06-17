@@ -13,6 +13,7 @@ $material = new Material( $_POST["txtIdMaterial"],
 
                      
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnEliminar'])){
+  $material->eliminarMO();
   $material->eliminarGM();
   $material->eliminar();
   header("Location: ../../Vista/InterfazInventario_Material/index.php");

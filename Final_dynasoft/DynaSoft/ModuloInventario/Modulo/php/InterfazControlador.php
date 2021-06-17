@@ -22,6 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['btnEliminar'])){
   $mantenimiento->eliminar();
   $seguro->eliminarGS();
   $seguro->eliminar();
+  $equipo->eliminarEO();
   $equipo->eliminarGE();
   $equipo->eliminar();
   header("Location: ../../Vista/InterfazInventario_Equipo/index.php");

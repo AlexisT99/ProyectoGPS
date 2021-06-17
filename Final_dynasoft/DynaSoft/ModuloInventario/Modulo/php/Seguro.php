@@ -59,7 +59,16 @@ class Seguro{
     }//fin insertar
     function insertarGastoS(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
-            $query= "INSERT INTO gastos_seguro (ID_SEGURO,MONTO_SEGURO)  VALUES ('$this->id_seguro','$this->costo_seguro')";
+            //Se busca el total del gasto
+            $query = "SELECT MONTO FROM gastos WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            $fila=$datos->fetch_assoc();
+                    $total = $fila['MONTO'];
+            //Se actualiza el total de gasto
+            $query = "UPDATE FROM gastos SET MONTO = ($total + $this->costo_seguro) WHERE IDGASTO = '2'";
+            $datos = mysqli_query($conexion,$query);
+            //Se inserta el Seguro al Gasto
+            $query= "INSERT INTO gastos_seguro (IDGASTO,ID_SEGURO,MONTO_SEGURO)  VALUES ('2','$this->id_seguro','$this->costo_seguro')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
 
