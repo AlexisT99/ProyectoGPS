@@ -94,9 +94,12 @@ class Mantenimiento{
             $fila=$datos->fetch_assoc();
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
-            $query = "UPDATE gastos SET MONTO = ($total + $this->precio) WHERE IDGASTO = '2'";
+            $total = (floatval($total)+floatval($this->precio));
+            $query = "UPDATE gastos SET MONTO = $total WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el gastoMantenimiento
+            $query= "INSERT INTO `solicitudes_gastos` (`IDTRABAJADOR`, `IDGASTO`, `ESTADOSOLICITUD`) VALUES ('1', '2', 'E')";
+            $resultado = mysqli_query($conexion,$query);
             $query= "INSERT INTO costomantener (IDGASTO,ID_MANTENIMIENTO,CODIGO_EQUIPO,MONTO_MANTENER)  VALUES ('2',(SELECT ID_MANTENIMIENTO FROM Mantenimiento WHERE CODIGO_EQUIPO ='$this->codigo_equipo' ),'$this->codigo_equipo','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGastoM

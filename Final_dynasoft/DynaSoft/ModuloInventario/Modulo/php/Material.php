@@ -124,10 +124,14 @@ class Material{
             $fila=$datos->fetch_assoc();
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
-            $total = $total + ($this->cantidad * $this->precio);
+            $total = (floatval($total)+floatval($this->precio));
+            $total = floatval($total) + (floatval($this->cantidad) * floatval($this->precio));
+            $si = (floatval($this->cantidad) * floatval($this->precio));
             $query = "UPDATE gastos SET MONTO = $total WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el gastoMaterial
+            $query= "INSERT INTO `solicitudes_gastos` (`IDTRABAJADOR`, `IDGASTO`, `ESTADOSOLICITUD`) VALUES ('1', '2', 'E')";
+            $resultado = mysqli_query($conexion,$query);
             $query= "INSERT INTO gastos_material(IDGASTO,ID_MATERIAL,CANTIDAD_GM,PRECIO_UNITARIO_GM)  VALUES ('2','$this->id_material','$this->cantidad','$this->precio')";
             $resultado = mysqli_query($conexion,$query);
 

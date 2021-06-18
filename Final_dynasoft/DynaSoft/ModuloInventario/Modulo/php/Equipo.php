@@ -93,6 +93,9 @@ class Equipo{
         $query = "INSERT INTO EQUIPO VALUES('$this->codigo_equipo','1','$this->descripcion','$this->caracteristicas','$this->marca','$this->modelo','$this->tipo','D')";
         ChromePhp::log($query);
         $resultado = mysqli_query ($conexion,$query );
+        $query= "INSERT INTO gastos (IDGASTO, IDTRABAJADOR, FECHAGASTO, MONTO, DESCRIPCION) 
+            VALUES ('2', '1', '2021-06-18', '70', 'Gasto de compra')";
+            $resultado = mysqli_query($conexion,$query);
     }//fin insertar
     function insertarGasto(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');
@@ -102,13 +105,23 @@ class Equipo{
             $fila=$datos->fetch_assoc();
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
-            $query = "UPDATE gastos SET MONTO = ($total + $this->precio) WHERE IDGASTO = '2'";
+            $preciofloat = floatval($this->precio);
+            $totalfloat = (floatval($total) + floatval($this->precio));
+            $query = "UPDATE gastos SET MONTO = $totalfloat WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el gastoEquipo
-            $query= "INSERT INTO GASTOS_EQUIPO (IDGASTO,CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE)  VALUES ('2','$this->codigo_equipo', '1' ,'$this->precio')";
+            $query= "INSERT INTO solicitudes_gastos (IDTRABAJADOR, IDGASTO, ESTADOSOLICITUD) VALUES ('1', '2', 'E')";
+            $resultado = mysqli_query($conexion,$query);
+            $query= "INSERT INTO GASTOS_EQUIPO (IDGASTO,CODIGO_EQUIPO,CANTIDAD_GE,PRECIO_UNITARIO_GE) 
+             VALUES ('2','$this->codigo_equipo', '1' ,'$this->precio')";
             ChromePhp::log($query);
             $resultado = mysqli_query($conexion,$query);
+
     }//fin insertarGasto
+    function insertarGastoC(){
+        
+    }
+    
 
     function actualizar(){
         $conexion = mysqli_connect("localhost","root","",'dynasoft');

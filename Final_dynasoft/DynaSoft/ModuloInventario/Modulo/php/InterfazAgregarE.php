@@ -45,7 +45,6 @@
                 }
             }
         }
-        
         header("Location: ../../Vista/AgregarEquipo/index.php");
     } 
 ?>

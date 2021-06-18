@@ -65,9 +65,12 @@ class Seguro{
             $fila=$datos->fetch_assoc();
                     $total = $fila['MONTO'];
             //Se actualiza el total de gasto
-            $query = "UPDATE gastos SET MONTO = ($total + $this->costo_seguro) WHERE IDGASTO = '2'";
+            $total = (floatval($total)+floatval($this->costo_seguro));
+            $query = "UPDATE gastos SET MONTO = $total WHERE IDGASTO = '2'";
             $datos = mysqli_query($conexion,$query);
             //Se inserta el Seguro al Gasto
+            $query= "INSERT INTO `solicitudes_gastos` (`IDTRABAJADOR`, `IDGASTO`, `ESTADOSOLICITUD`) VALUES ('1', '2', 'E')";
+            $resultado = mysqli_query($conexion,$query);
             $query= "INSERT INTO gastos_seguro (IDGASTO,ID_SEGURO,MONTO_SEGURO)  VALUES ('2','$this->id_seguro','$this->costo_seguro')";
             $resultado = mysqli_query($conexion,$query);
     }//fin insertarGasto
