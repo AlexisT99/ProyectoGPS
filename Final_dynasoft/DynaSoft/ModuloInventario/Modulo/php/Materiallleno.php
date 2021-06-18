@@ -89,7 +89,8 @@
                               <div >
                                   <div id="ventanaDerecha">
                                       <div style="padding-bottom: 30px;">
-                                      <a id="btnMaterial" href="../InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a><a id="btnEquipo" href="../InterfazInventario_Equipo/index.php">Equipo</a></div>
+                                      <a id="btnMaterial" href="../../Vista/InterfazInventario_Material/index.php" style="font-weight: bold;background: white;margin: 10px;width: inherit;padding: 7px;">Material</a>
+                                      <a id="btnEquipo" href="../../Vista/InterfazInventario_Equipo/index.php">Equipo</a></div>
                                       <div>
                                           <div class="table-responsive" id="tblObjeto">
                                               <table class="table">
